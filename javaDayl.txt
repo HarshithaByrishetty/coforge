@@ -1,0 +1,2791 @@
+to read a data from keyboard
+java provide a Scanner class present in 
+java.util.* pkg
+
+Constructor
+Scanner(InputStream in)
+
+methods
+int nextInt() reads the integer
+float nextFloat()
+double nextDouble()
+String next()
+String nextLine() reads the String with spaces.
+
+package alekhya;
+import java.util.Scanner;
+//import java.util.*;
+public class MyEx{
+public static void main(){
+Scanner s=new Scanner(System.in);
+System.out.println("enter the full name:");
+String fname=s.next();
+System.out.println("enter the 7th ans 8th sem marks:");
+double seven=s.nextDouble();
+double eight=s.nextDouble();
+double avg=(seven+eight)/2.0;//s.nextLine();
+System.out.println("enter designation:")
+String des=s.next();//nextLine()===des+=s.nextLine();
+System.out.println(fname+"a"+des+"Avg marks:"+avg+"%");
+}
+}
+
+
+enter the first number if first number ==1
+enter the second number if second number==2
+display correct
+if the 2nd no. is wrong
+display 2nd is invalid
+if the 
+
+
+package alekhya;
+import java.util.*;
+public class Control{
+public static void main(String args[]){
+Scanner s=new Scanner(System.in);
+System.out.println("enter 1st no.:");
+int n1=s.nextInt();
+if(n1==1)
+{
+System.out.println("enter 2nd no.:");
+int n2=s.nextInt();
+if(n2==2)
+{
+System.out.println("correct input");
+}
+else
+{
+System.out.println("2nd input is invalid");
+}
+}
+else{
+System.out.println("1st i/p is invalid");
+}
+}
+}
+
+
+
+package alekhya;
+import java.util.*;
+public class Control{
+public static void main(String args[]){
+Scanner s=new Scanner(System.in);
+System.out.println("enter month:");
+int m=s.nextInt();
+if((m==11)||(m==12)||(m==1))
+{
+System.out.println("winter");
+}
+else if((m==2)||(m==3)||(m==4))
+{
+System.out.println("winter");
+else if((m==2)||(m==3)||(m==4))
+{
+System.out.println("summer");
+}
+else if((m==5)||(m==6)||(m==7))
+{
+System.out.print("spring");
+}
+else if((m==8)||(m==9)||(m==10))
+{
+System.out.print("autumn");
+}
+else{
+System.out.println("invalid month");
+}
+
+
+
+
+package alekhya;
+import java.util.*;
+public class Control{
+public static void main(String args[]){
+Scanner s=new Scanner(System.in);
+System.out.println("enter limit:");
+int n=s.nextInt();
+while(n>0)
+{
+System.out.println(n);
+}
+}}
+
+
+
+
+
+
+package alekhya;
+import java.util.*;
+public class Control{
+public static void main(String args[]){
+Scanner s=new Scanner(System.in);
+System.out.println("enter limit:");
+int n=s.nextInt();
+do{
+System.out.println(n);
+}while(n>0);
+}
+}
+
+
+
+
+package alekhya;
+import java.util.*;
+public class Control{
+public static void main(String args[]){
+Scanner s=new Scanner(System.in);
+System.out.println("enter limit:");
+int n=s.nextInt();
+for(int i=n;i>0;i--)
+{
+System.out.println(i);
+}
+}}
+
+
+
+ARRAY::int a=new int[4];
+import java.util.*;
+public class Control{
+public static void main(String args[]){
+int a=new int[4];
+a[0]=10;a[1]=20;a[2]=30;a[3]=40;
+for(int i=0;i<a.length;i++)
+{System.out.println(a[i]+" ");
+}
+}
+}
+
+
+
+
+FOR EACH::IT IS ALSO CALLED ENHANCED FOR LOOP INTRODUCED IN JDK 1.5 VERSION
+import java.util.*;
+public class Control{
+public static void main(String args[]){
+int a=new int[4];
+a[0]=10;a[1]=20;a[2]=30;a[3]=40;
+for(int i:a)
+{System.out.println(i);
+}
+}
+}
+
+
+
+
+
+MULTI DIMENSIONAL ARRAY::
+import java.util.*;
+public class Control{
+public static void main(String args[]){
+int a[][]=new int[3][3];//[3][2] 
+a[0][0]=11;a[0][1]=21;a[0][2]=31;a[1][0]=41;a[1][1]=51;a[1][2]=61;a[2][0]=71;a[2][1]=81;a[2][2]=91;
+for(int i=0;i<a.length;i++)//for(int i[]:a)
+{
+for(int j=0;j<a.length;j++)//j<a[i].length//for(int j:i)
+{
+System.out.println(a[i][j]+" ");//no ln ====(a[i][j]+"\t")//println(j+"\t");
+}
+System.out.println();
+}
+}
+}
+
+
+
+DECLARE AN INTEGER ARRAY OF SIZE 8 INSERT ELEMENTS FROM KEYBOARD AND DISPLAY.
+import java.util.*;
+public class Ex6{
+public static void main(String args[]){
+Scanner s=new Scanner(System.in);
+System.out.println("enter array size:");
+int n=s.nextInt();
+int a[]=new int[n];
+System.out.println("enter elements");
+for(int i=0;i<a.length;i++)
+{
+a[i]=s.nextInt();
+}
+System.out.println("elements of array");
+for(int e:a)
+{
+System.out.println(e);
+}
+}
+}
+
+
+
+
+
+SWITCH CASE:::
+import java.util.*;
+public class Ex6{
+public static void main(String args[]){
+Scanner s=new Scanner(System.in);
+System.out.println("enter the day:");
+String day=s.next();
+switch(day)
+{
+case "mon":System.out.println("Today is Monday");break;
+case "tues":System.out.println("Today is Tuesday");break;
+case "wednes":System.out.println("Today is Wednesday");break;
+case "thurs":System.out.println("Today is Thursday");break;
+case "fri":System.out.println("Today is Friday");break;
+default:System.out.println("wek end");break;
+}
+}
+}
+
+
+
+USING CONTINUE DISPLAY THE ODD NUMBER B/W 1 TO 20
+
+import java.util.*;
+public class Ex6{
+public static void main(String args[]){
+for(int i=1;i<20;i+2)
+{
+if(i%2==0)
+{
+System.out.println(i);
+}
+continue;
+}
+}
+}
+
+
+
+1.FIND THE SUM OF TWO NUMBERS GIVE THE INPUT FROM COMMAND LINE ARGUMENTS USING ECLIPSE.
+2.WRITE A PROGRAM TO CHECK ENTERED NUMBER IS ARMSTRONG OR NOT.
+3.WRITE A PROGRAM TO CREATE A JAGGED ARRAY.
+4.ENTER THE 7 ELEMENTS FROM KEYBOARD STORE IT IN ARRAY USING BUBBLE/SELECTION SORT DISPLAY ARRAY ELEMENTS IN ASCENDING ORDER.
+
+1.
+class Adding{
+public static void main(String args[]){
+int a=Integer.parseInt(args[0]);
+int b=Integer.parseInt(args[1]);
+int s=a+b;
+System.out.println("sum"+s);
+}
+}
+
+
+
+2.ARMSTRONG
+import java.util.*;
+import java.lang.*;
+class Armstrong{
+public static void main(String args[])
+{
+Scanner s=new Scanner(System.in);
+System.out.println("enter number:");
+int n=s.nextInt();
+int  original ,remainder,result=0;
+original=n;
+while(original!=0)
+{
+remainder=original%10;
+result+=Math.pow(remainder,3);
+original/=10;
+}
+if(result==n)
+System.out.println(n+"is a armstrong");
+else
+System.out.println(n+"not");
+}
+}
+
+
+
+
+3.
+class Jagged {
+    public static void main(String[] args)
+    {
+        int r = 5;
+        int arr[][] = new int[r][];
+        for (int i = 0; i < arr.length; i++)
+            arr[i] = new int[i + 1];
+        int count = 0;
+        for (int i = 0; i < arr.length; i++)
+            for (int j = 0; j < arr[i].length; j++)
+                arr[i][j] = count++;
+        System.out.println("Contents of 2D Jagged Array");
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++)
+                System.out.print(arr[i][j] + " ");
+            System.out.println();
+        }
+    }
+}
+
+
+
+4.
+import java.util.*;
+class Sort{
+static  void bubbleSort(int array[]) {
+    int size = array.length;
+    for (int i = 0; i < size - 1; i++)
+      for (int j = 0; j < size - i - 1; j++)
+        if (array[j] > array[j + 1]) {
+          int temp = array[j];
+          array[j] = array[j + 1];
+          array[j + 1] = temp;
+        }
+  }
+
+    public static void main(String args[]) {
+    Scanner s=new Scanner(System.in);
+    System.out.println("enter no.of elements:");
+    int n=s.nextInt();
+    int a[]=new int[n];
+    System.out.println("enter elements");
+    for(int i=0;i<a.length;i++)
+    {
+     a[i]=s.nextInt();
+     }
+
+    Sort.bubbleSort(a);
+    
+    System.out.println("Sorted Array in Ascending Order:");
+    System.out.println(Arrays.toString(a));
+  }
+}
+
+
+
+
+
+CLASSES::
+template /blue print for an object,container for data/code
+METHODS::
+contains the behaviour of the class
+these expose the business logic
+2 types:1.abstract--does not have body.
+2.concrete--which have body  2--types  :
+1.void==does not return anything
+2.primitive//user defined
+OBJECT::
+properties==
+1.state--represents the properties of object.
+2.behaviour--represents the functionality of the object.
+3.id--also known as reference id
+when object is craeted java compiler provides a reference id to each object
+packagename.classname@hexadecimalvalue
+
+
+
+1.
+import java.util.*;
+class Add{
+int a,b,c;
+public void data(int m,int n,int o){
+a=m;
+b=n;
+c=0;
+}
+public int result(){
+return a+b+c;
+}
+}
+class Sum{
+public static void main(String args[]){
+//int sum;
+Add a=new Add();
+a.data(2,3,4);
+System.out.println("Sum:"+a.result());
+//int sum=Add.result();
+//System.out.println("sum:"+sum);
+}
+}
+
+
+
+2.
+import java.util.*;
+class Data{
+String name;
+String des;
+String company;
+String city;
+public void details(String na,String de,String com,String ci){
+name=na;
+des=de;
+company=com;
+city=ci;
+} 
+public void display(){
+System.out.println("I am"+name+"working as"+des+"in"+company+"at"+city);
+}
+}
+public class Emp{
+public static void main(String args[]){
+Scanner s=new Scanner(System.in);
+System.out.println("enter name:");
+String n=s.next();
+System.out.println("enter des:");
+String m=s.next();
+System.out.println("enter company:");
+String c=s.next();
+System.out.println("enter city:");
+String l=s.next();
+Data d=new Data();
+d.details(n,m,c,l);
+d.display();
+}
+}
+
+
+
+3.FIND THE CUBE OF THE NUMBER.
+
+import java.util.*;
+class Num{
+int number;
+public void ex(int a)
+{
+number=a;
+}
+public int display(){
+return number*number*number;
+}
+}
+public class Cube{
+public static void main(String args[]){
+Scanner s=new Scanner(System.in);
+System.out.println("enter number");
+int n=s.nextInt();
+Num num=new Num();
+num.ex(n);
+System.out.println("cube:"+num.display());
+}
+}
+
+
+
+METHOD OVERLOADING==
+code readability.also called compile time polymorphism.
+
+SUM OF 2,3,4 NUMBERS.
+
+
+class Sum1{
+public void add(int m,int n){
+System.out.println(m+n);
+}
+public void add(int m,int n,int o){
+System.out.println(m+n+o);
+}
+public void add(int m,int n,int o,int p){
+System.out.println(m+n+o+p);
+}
+public static void main(String[] args){
+Sum1 s=new Sum1();
+s.add(2,3);
+s.add(1,2,3);
+s.add(1,2,3,4);
+}
+}
+
+
+CONSTRUCTORS::
+default constructor is applied only if no constructors are present .
+
+import java.util.*;
+class Cons{
+int a,b,c;
+Cons(){
+System.out.println("hi");
+}
+
+Cons(int m,int n,int o){
+a=m;
+b=n;
+c=o;
+System.out.println("Sum:"+(a+b+c));
+}
+}
+class Constructor{
+public static void main(String args[]){
+//int sum;
+Cons a=new Cons();
+Cons a1=new Cons(1,2,3);
+}
+}
+
+
+
+THIS KEYWORD::
+class Person{
+int id;
+String name;
+Person(int id,String name)
+{
+id=id;//this.id=id;
+name=name;//this.name=name;
+}
+void dis(){
+System.out.println(id+"\t"+name);
+}
+public static void main(String args[]){
+Person p=new Person(101857,"Alekhya");
+p.dis();
+}
+}
+
+
+W.A.P TO INVOKE COPY CONSTRUCTOR
+W.A.P TO PROVE THAT THIS REFERS TO "current class instances
+
+
+
+class Student{
+int id;
+String name;
+int age;
+public Student(int id,String name){
+this();
+this.id=id;
+this.name=name;
+System.out.println(id+name);
+}
+public Student(){
+System.out.println("hi");
+}
+public Student(int id,String name,int age){
+this(id,name);
+this.age=age;
+System.out.println(id+name+age);
+}
+public static void main(String args[]){
+Student s=new Student();
+Student s1=new Student(1,"amit");
+Student s2=new Student(1,"anil",20);
+}
+}
+
+
+
+STATIC KEYWORD:::
+it is applied to instance variables
+method blocks and nested classes
+when u apply static key word to variablees
+such variables stored in separate memory area called class area
+these variables represents common 
+
+
+class Empl{
+int id;
+String name;
+static String company="coforge";
+Emp1(int id,String name){
+this.id=id;
+this.name=name;
+System.out.println(id+name+company);
+}
+public static void main(String args[]){
+Empl e=new Empl(101,"abc");
+Empl e1=new Empl(102,"xyz");
+}
+}
+
+
+STATIC BLOCK::
+ class Sample1{
+static void m(){
+{
+System.out.println("I am Static method");
+}
+static{
+System.out.println("i am static block");
+System.out.println(z);
+}
+public Sample1(){
+System.out.println("I am constructor");
+}
+public static void main(String args[]){
+m();
+Sample1 s=new Sample1();
+}
+}
+
+
+
+
+
+NESTED CLASSES:::
+1.STATIC ---
+2.NON STATIC
+
+ADVANTAGES--
+NESTED CLASSES ACCESS THE MEMBERS OF OUTER CLASS INCLUDING PRIVATE
+USED TO ACHIEVE THE CODE READABILITY MAINTAINABILITY CODE OPTIMIZATION
+
+
+NON STATIC NESTED CLASS HAVE 3 TYPES----
+1.MEMBER INNER CLASS----INSIDE THE CLASS AND OUTSIDE THE METHOD
+can have any access specifier.
+
+
+
+class Member{
+private int n=100;
+class Inner{
+void m(){
+System.out.println(n);
+}
+}
+void mout(){
+Inner i=new Inner();
+i.m();
+}
+public static void main(String args[]){
+Member mm=new Member();
+mm.mout();
+}
+} 
+
+2.LOCAL INNER CLASS--INSIDE CLASS AND INSIDE METHOD
+IT MUST HAVE ONLY FINAL OR DEFAULT ACCESS SPECIFIERS
+MUST ACCESS ONLY FINAL/DEFAULT LOCAL VARIABLES
+
+class Local{
+private int data=100;
+void m(){
+int data1=200;
+class LocalInner{
+void m1()
+{
+System.out.println(data);
+}
+}
+public static void main(String args[]){
+LocalInner l=new LocalInner();
+l.m1();
+}
+}
+}
+
+
+3.ANONYMOUS INNER CLASS
+
+
+
+
+
+
+
+
+STATIC NESTED CLASS----NESTED CLASS WUTH STATIC KEYWORD
+IT WILL ACCESS ONLY STATIC MEMBERS OF OUTER CLASS INCLUDING PRIVATE.
+INSIDE THE CLASS AND OUTSIDE THE METHOD.
+
+
+class StaticNested{
+static int data=100;
+static class Inner(){
+void m()//static void m()
+{
+System.out.println(data);
+}
+}
+public static void main(String args[]){
+StaticNested.Inner si=new StaticNested.Inner();//StaticNested.Inner
+si.m();
+}
+}
+
+
+
+
+
+
+1.CREATE A CLASS CALLED EMP WITH ID,NAME,DES AND BASIC SALARY READ FROM THE KEYBOARD
+CALCULATE NET SALARY
+NETSALARY=BASICSALARY+DA(150% OF BASIC SALARY)+HRA(30% OF BASIC SAL)+CCA(500)-TAX(1000)
+USE CONSTRUCTORS AND METHODS
+
+
+2.USING THE OOPS CONCEPTS AND STATIC METHOD FIND THE AREA OF TRIANGLE AND RECTANGLE.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+INHERITANCE:::::::::::::::::::::::::::::::
+
+IF ONE OBJECT aquries properties and behaviour of another/parent object it is called inheritance
+a class which got inherritted is called the super class/ parent class/ base class
+a class which doesnot in herritaing is called the sub class/ child class extends/ implements key word
+
+Types of inheritance
+single inheritance:: one class extends one class or one class implements one interface 
+multilevel inheritance::: here class a extends class b class b extends class c
+hierarchical inheritance:::: child class inheritance the parent class
+
+--------------------------------------------------------------------------------------------------------------------------
+Method overriding::::::
+when child has a same method name and same type signature as that of parent class method name and type signature
+we can call that child class method has overriden parent class method
+
+When we need a seperate implementation for the sub class method which is alredy difined by the super class we need method overriding
+to achive method overriding we need foll super class and sub class method name and type signature must be same
+there must be inheritance between classes(IS-A relation ship ) it is called the runtime polymorphism..
+
+EX::::::
+package training;
+class emp{
+	void m()
+	{
+		System.out.println("super");
+	}
+}
+public class single extends emp{
+	void M()
+	{
+		System.out.println("hello");
+	}
+	public static void main(String[] args) {
+		single c=new single();
+		c.M();
+	}
+}
+____________________________________________________________________________________________________________________________
+ACCESS SPECIFIER IN METHOD OVERRIDING::::::::::
+in the method ovrriding sub class overriding method access specifier must have widest scope access specifier compare to the super class methods access 
+specifer..
+
+
+static methods cannot be overriden
+ as to invoke static methods no need to create object
+EX::::::::::::::
+package training;
+class emp1{
+	void m()
+	{
+		System.out.println("hii");
+	}
+}
+public class customer1 extends emp1{
+	void m()
+	{
+		System.out.println("hello");
+	}
+	public static void main(String[] args) {
+		emp1 c=new customer1();
+		c.m();
+	}
+}
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+ANNOTATIONS IN JAVA:::::::::::::
+these provide run time information to jvm at run time reduces lot of code 
+it is introduced in jdk 1.5
+we have built in as well as user defined annotations 
+it starts with symbol @
+built in annotations
+@override::::it is a method level annotation froces developer to compulasary override the method
+it is present in java.lang pkg
+
+
+
+
+upcasting 
+ it is also called run time polymorphism call to over ridden method resloved at run time rather than compile time is called run time polymorphism
+
+in this super class reference varible refers to sub class object to reduce the burden of sub class and to improve the performance of jvm we use upcasting
+
+it will work only for method overriding 
+for data members it will not work 
+-----------------------------------------------------------------------
+downcasting:::::::
+in this subclass reference varible refers to super class object u will get compile time error/ classs cast exception 
+to eliminate this first we achive upcasting then down casting
+
+EX:::::::
+package training;
+class emp2{
+	void m()
+	{
+		System.out.println("down casting example");
+	}
+}
+public class upcasting extends emp2{
+@Override
+void m() {
+	System.out.println("sub downcasting example");
+}
+public static void main(String[] args) {
+	emp2 e=new upcasting();
+	upcasting u=new upcasting();
+	u=(upcasting)e;
+	u.m();
+}
+}
+-------------------------------------------------------------------------------------------------------------------------------------------
+SUPER KEY WORD:::::::::::
+ used in 3 forms
+-- used to reffer a super class reference varible
+   syntax::: super.instancevar
+-- used to invoke a super class method
+   syntax:::super.methodname
+--used to invoke the super class constructor
+   syntax:::super();  super(param1,param2);
+
+
+EX:::::::::::::
+package training;
+class emp3{
+	void m()
+	{
+		System.out.println("i am emp3");
+	}
+}
+class work1 extends emp3
+{
+	@Override
+	void m()
+	{
+		super.m();
+		System.out.println("i am manager");
+	}
+	public static void main(String[] args) {
+		emp3 e=new work1();
+		e.m();
+	}
+}
+output::::::::
+i am emp3
+i am manager
+----------------------------------------------------------------------------------------------------------------------------------
+package training;
+class Two
+{
+	int a,b;
+	public Two()
+	{
+		System.out.println("default");
+	}
+	public Two(int a,int b) {
+		this.a=a;
+		this.b=b;
+	}
+	void sum() {
+		System.out.println("sum of 2 no"+(a+b));
+	}
+}
+
+public class summation  extends Two{
+  int c;
+  public summation()
+  {
+	  System.out.println("default constructor of summing");
+  }
+  public summation(int a, int b, int c)
+  {
+	  super(a,b);
+	  this.c=c;
+  }
+  //@Override
+  void m()
+  {
+	  super.sum();
+	  System.out.println("sum of 3 no"+(a+b+c));
+  }
+  public static void main(String[] args) {
+	  summation S= new summation();
+	  summation c= new summation(1,2,3);
+	   c.m();
+  }
+}
+output::::::::::
+default
+default constructor of summing
+sum of 2 no3
+sum of 3 no6
+------------------------------------------------------------------------------------------------------------------------------------------------------
+package training 
+clss shape
+{
+double dim1,dim2;
+public shape(double dim1,double dim2){
+this dim1=dim1;
+this dim2=dim2;
+}
+double area()
+{
+return 0.0;
+}
+}
+class rect extends shape
+{
+rect(double dim1,double dim2)
+{
+super(dim1,dim2);
+}
+@override
+double area()
+{
+return dim1*dim2;
+}}
+class triangle extends shape
+{
+tringle(double dim1,double dim2)
+{
+super(dim1,dim2);
+}
+@override
+double area()
+{
+return 0.5*dim1*dim2;
+}
+public static void main(String[] args)
+{
+scanner s=new scanner(System.in);
+System.out.println("enter dim1 and dim2");
+double d1=s.nextDouble();
+double d2=s.nextDouble();
+shape r= new React(d1,d2);
+System.out.println("area of rect"+r.area());
+shape t=new Triangle(d1,d2);
+System.out.println("Area of triangle"+t.area());
+}
+}
+---------------------------------------------------------------------------------------------------------------------------------------------
+final key word
+final key word is applied to instanace varibles if we apply to instance varibles its valu cannot be modified 
+final method cannot not be modified but it can be inheritted and classes
+final class cannot be extended/ sub classed
+if creates a final varible without intilizing it is called BLANK FINAL varible in case we need to intilize the varible we need to instilize in constructor
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+ABSTRACT CLASSES & METHODS::
+abstract class contain abstract methods and concrete methods
+abstract method :::
+a method which doesnot contain any body or implementation is called abstract method 
+syntax+===
+public abstract void m();
+public abstract double area();
+
+
+any class which contain abstract method that class is called abstract class and abstract class contain both concrete and abstract methods.
+it is not mandatory that abstract class can contain atleast one abstract method
+since abstract classes contains abstract methods u cannot create a object for abstract class throuh abstract class u cannot achive the 100% abstraction
+as abstract class contain constructors instance varibles main method concrete method 
+abstarct class can contain fainal and static methods but abstract cannot be declared as final and static as final /static methods cannot be overridden
+
+abstarct class must be extende by 
+
+EX:::::::::::
+package trainee;
+public abstract class one{
+void m()
+{
+System.out.println("Hi");
+}
+int m1()
+{
+return 0
+}
+
+===============================================================================================================================
+INTERFACES::::
+used to achive 100%abstaraction
+ interfaces lack instances 
+
+interface will not contain 
+
+
+intefaces packages and access specifiers 
+ java provide 4 interface
+ =======user defined interface
+===== built in interfaces EX:::: set map queue
+======functional interface
+introduced in jdk 1.8 contains only 1 abstaract method
+=======marker interface
+such interface doesnot contain any kind of body
+EX:: serializable clonaeble
+
+
+
+
+
+
+=================================================================================================================================================
+PACKAGES:::
+it is a group of classes and interfaces
+partitioning of class name into managable chunks is called packages 
+package is a container for classes and interfaces
+
+2 types 
+user defined 
+built in packages
+java.util   java.lang   java.net   java.sql  java.io ect
+how to create user defined pkg??
+package pkgname;
+
+ADVANTAGES::::
+ packages provides access protection 
+eliminates naming collision
+
+
+how to execute package program from command promot???
+class my 
+{
+   Public static void main(String[] args)
+}
+System.out.println("hi")
+}
+
+
+how to execute package program from another pkg program???
+3 ways
+1===importing whole package(*)
+2===importing package name with class name/interface name
+3===no import
+
+when we define package is called sub packages
+
+Syntax====
+pk1.pkg2.pk3.pkg4...
+
+=====================================================================================================================================================
+assignments
+
+1  prove that abstract class is used to show the implementation of interface methods???
+2  create a public interface in one package create a class in another package and implement that interface
+3  write a program to nest interface in a class 
+4  create a calss called emp with id, name des and basic salary read from keyboard
+===calculate net salary 
+net salary=basicsalary+da(150% of basicsalary)+hra(30% of basic sal)+cca(500)-tax(1000)
+use inheritance concepts
+=====================================================================================================================================================
+
+java =======java packages
+subpackages=== --lang--System.class--String.clss
+  of java      --util--arrayList.class--Map.class========classes
+               --awt--Button.class
+
+
+
+====================================================================================================================================================
+JAVA LIBRARIES:::::::::::::
+
+java.lang.package
+String StringBuilder Thread Exception classws
+
+java.util package
+collection framework & java 1.8 features
+
+STRING::
+it is a sequence of immutable characters
+immutable means not modifiable/chnagable/alterable
+\
+How many ways we cna create a string????
+==using String constructor
+==using literal technique
+
+using String constructor
+Constructor of String 
+String()
+String(String s)
+
+String s=new String("coforge");
+String s1=new String("coforge");
+in this 2 coforge are created and it is stored HEAP area
+
+=======================================================================================================================================================
+USing literal technique
+String s1="coforge"
+String s2="coforge";in this above code only one coforge is created and stored in String CONSTANT POOL(IT IS INSIDE THE HEAP AREA) 
+String n=("coforge");
+n=n.concat("harshitha");
+System.out.println(n);
+
+
+Why the strings are immutable???
+if  reference varisbles changes that string it effects to all reference varibles 
+That is why STring are immutable
+
+internally String class implements charSequence interface 
+
+ 
+
+char c[]={"c","o","f","o","r","g","e"};
+String ss=new String(c);
+System.out.println(ss);
+===================================================================
+methods of string class
+ boolean equals(String s)
+ boolean equalsIgnoreCase(String s)
+ boolean == compares references 
+int compareTo(String s) compares value
+char charAt(int index)
+String substring(int index)
+int indexOf(char c)
+int lastIndexOf(char c)
+String concat(String s)
+String intern()
+String toUppercase()
+String to Lowercase()
+boolean startWith(String s)
+String trim()
+int length()
+static String valueOf(Object o)  convert primitive type to string
+String[] split(String regexp)
+byte[]
+getBytes[]
+
+EX:::::::::::
+package training;
+public class abc{
+	public static void main(String[] args) {
+		String s="welcome";
+		String s1=new String("welcome");
+		String s2= "WELCOME";
+		String s4="welcommme";
+		System.out.println(s.equals(s1));
+		System.out.println(s==s1);
+		System.out.println(s1.equalsIgnoreCase(s2));
+		System.out.println(s.compareTo(s4));
+	}
+}
+output::::::::::
+true
+false
+true
+-8
+---------------------------------------------------------------------------------------------------------------------------
+INDEXOF::::::
+EX::::
+package training;
+public class abc{
+	public static void main(String[] args) {
+		String s="welcome";
+		String s1=new String("welcome");
+		String s2= "WELCOME";
+		String s4="welcommme";
+		System.out.println(s.equals(s1));
+		System.out.println(s==s1);
+		System.out.println(s1.equalsIgnoreCase(s2));
+		System.out.println(s.compareTo(s4));
+		
+		System.out.println("hyderbad".charAt(3));
+		System.out.println("hyderbad is located in telangana".indexOf('a',13));
+		System.out.println("secundarabad is near to hyerbad".substring(5));
+		
+				}
+}
+
+OUTPUT::::::::::::::
+-8
+e
+15
+darabad is near to hyerbad
+===========================================================================================================================================
+split string
+EX::::::
+package training;
+public class abc{
+	public static void main(String[] args) {
+		String s="welcome";
+		String s1=new String("welcome");
+		String s2= "WELCOME";
+		String s4="welcommme";
+		System.out.println(s.equals(s1));
+		System.out.println(s==s1);
+		System.out.println(s1.equalsIgnoreCase(s2));
+		System.out.println(s.compareTo(s4));
+		
+		System.out.println("hyderbad".charAt(3));
+		System.out.println("hyderbad is located in telangana".indexOf('a',13));
+		System.out.println("secundarabad is near to hyerbad".substring(5));
+		System.out.println("hello".toUpperCase());
+		String dup=new String("coforge");
+		System.out.println(dup.intern());
+		String Sentence="this is hyderbad located in telangana state";
+		String[] str=Sentence.split("\\s");
+        for(String word:str)
+        {
+        	System.out.println(word);
+        }
+		
+		
+				}
+}
+
+output:::
+true
+false
+true
+-8
+e
+15
+darabad is near to hyerbad
+HELLO
+coforge
+this
+is
+hyderbad
+located
+in
+telangana
+state
+===================================================================================================
+toString method::::
+convert the object in to string
+it is  a method of object class
+
+SYNTAX::::::::
+public String toString()
+compiler internally caalls tostring() method
+developer need to override it
+
+
+StringBuffer class::
+
+used to create a mutable String
+(mutable means u can add/delete/append/replace characters)
+
+it is synchronized means it is thread safe
+i.e. multiple threads cannot access the StringBuffer method cocunurrently
+
+
+constructor::::
+
+StringBuffer()
+StringBuffer(int size)
+StringBuffer(string s)
+
+
+methods
+StringBuffer append(String s)
+StringBuffer insert(int index, String s)
+StringBuffer replace(int index,String old, String new)
+StringBuffer deleteCharAt(int index)
+
+
+
+
+
+
+=============================================================================================================================================
+=============================================================================================================================================
+EXCEPTION HANDLING:::::::::::::::::::::::::::::::::::
+exception is an abnormal condition occured in code sequence runtime
+if the occured exception is not handled then the program will terminate abnormaly and we cannot maintain the smooth flow of an application
+
+if the exception is occured in the method and handled/processed then the programm will terminate normally and we can maintain the smooth flow
+of an application thus the process of handling and exception is called "exception handling " and achieved throw try catch throw throws and finally keywords
+
+
+
+
+
+TYPES OF EXECPTION:::::::::::
+ checked exception:
+these will occur at compile time
+compiler is going to check such exception
+these extends throwable class
+
+EG::
+IOException ClassNotFoundException SQLException
+
+
+unchecked exception::::
+these will occur at run timr
+compiler is not going to check such exception
+these extends run time exception class
+
+eg:::
+ArrayIndexOutofBoundexception
+NullPointerException
+ArtimaticException
+NumberformatException
+ClassCastException
+
+
+
+ERRORS::::::::::::
+these are irrecoverable
+eg:::::::
+jvm error
+vm error
+stack over flow
+outof memory error
+
+super class exception is throwable
+
+
+
+
+try catch block::
+try::::::
+it is a block of code 
+which may contain exception or which may not contain exception
+
+catch:::
+aways written after try block
+
+used to handle exception
+
+NOTE::
+in the java program if any exception occured but not found the try catch block then jvm uses the default exception handler and prints stack trace
+Stack trace::
+it represents an error information which represents the line number where occured exception type exception class and method name.
+
+
+
+
+NOTE:::
+in each try catch block at a time only one exception is going to be occured and only exception to  be handled
+
+==========================================================================================================================================================
+try with multiple catch
+try
+{
+code
+}
+catch(subclass exception e){}
+catch(subclass exception e){}
+catch(subclass exception e){}
+catch(superclass exception e){}
+
+try block can also have multiple catch.
+when specifing multiple catch all catch statments much specify in order
+
+nested try
+we can aslso nest one try within anither try
+Syntax
+try
+{
+code
+try{code
+}
+catch(){}//catch for inner try
+}//outer catch closed
+catch(){}
+
+Static trace::it represents an error information which represents the line no where error occured exception type
+exception class and method namessss
+==========================================================================================================================================================
+Through catch::
+when u want to throw exception manully we use throe keyword
+
+SYNTAX:::::::
+throw throeableobject;
+
+
+SYNTAX:::::::
+throw new arthimetic exception()
+throughr new ArrayIndexOutOfBoundsException("error")
+throw new NullPointerException()
+thrownewException()
+thrownewIOException()
+
+RULES::::::::::::::::::::::::::::::::::::::::::::
+==U CANNOT THROW MULTIPLE EXCEPTIONS USING THROW
+U CANNOT WRITE STATEMNENTS AFTER THROW
+IF U THROW CHECKED EXCEPTIONS USING THROW
+U MUST USE TRY /CATCH BOLCK
+THROW MUST BE USED IN THE METHODS
+
+===========================================================================================================================================================
+how to create custom exception???
+
+[9:47 AM] Shaik Gousia
+throws keyword
+used to declare exception
+used for java built in methods
+some java built in methods throw exceptions
+to handle those exceptions we use throw keyword
+u can declare both checked and unchecked exceptions
+using throws keyword
+
+Syntax
+public static void main(String args[])throws ClassNotFoundException
+
+u can also declare multiple exceptions
+used in method signature
+========
+3 senarious
+1)exception occured and handled and method declared with throw keyword
+2)exception occured and not handled and method declared with throw keyword
+3)exception not occured and method declared with throws keyword
+========
+nenu yeppudu ye vishayam lo yedavanu ...vokka nanna vishayamlone ...nduko koncham ala gurtu vastey chalu asal agatledu
+nannu yeppudu yedipinchani nanna eppudu chudu......ammoooo...
+========
+finally::
+it is a block of code with always executes wether exception occured or not occured
+it is always executes after the try catch block
+JVM executes finally block JUST before terminating the programmeu can write finally  after try/try-catch
+there will be only 1 finally block for try/try-catch block
+finally block also executes if method returns something then also finally block excutes
+just before method returns to user
+finally never executes if user exits from program
+throught System.exit(0)
+
+Syntax
+
+finally
+{}
+=============
+
+ 
+
+
+ 
+=====================================================================================================================================================
+MULTI THREADING:::::::::::::::::::
+ thread is a part of the programm
+it is a seperate path of exception
+when u exectes multiple threads concurrently
+it is called multi threading
+EG:::::
+when you open word document
+one time u do formating
+at the same time u give for printing
+2 threads symultaniously running there
+multi threading improves the performance of the application by making best use of cpu time and minimize the creation of idel time.
+
+
+FEATURES OF THREADS:::
+Threads run in process
+it run inthe shared memory area of process
+it is light weight
+inter thread communication and context switching between 2 threads are very easy and less expensive.
+these are very light
+
+
+os---> 3 process
+       ----------
+         process 1===>t1=t2=t3 
+         process 2===>t1=t2
+         process 3===>t1
+
+
+LIFE CYCLE OF THREADS:::
+1 new
+when we create a new object of threads it is in a new state
+2 runnable
+when thread is in ready queue but it is not running is called runnable state.
+by calling the start() method thread reaches to runnable state
+3 running
+when threads gets CPU time and start executing
+it is in  running state when run() method called it reaches to running state. start() method called run() method
+4 non running
+when thread is running it gets interputed by IO block
+sleep wait. them it is reaches to non runnable state 
+5 dead
+when thread dies it reaches to dead state.
+from here u cannot restart thread....
+
+https://miro.medium.com/max/1050/1*AVdsesDdmzZz4XoKi-AHWQ.png  (image)
+
+----          ------       -------         -------        ------------      --------         -----------         --------         --------------
+
+how to create the thread??
+thread is a class present in java.lang.*pkg
+constructor
+
+Thread()
+Thread(Runnable r)
+Thread(String s)
+Thread(Runnable r, String s)
+here Runnable is an interface present in java.lang.pkg
+
+2 ways to create the threads
+1 extending thread class
+2 implementing Runnable interfaces
+
+
+METHODS OF THREAD CLASSES::::::
+VOID START()  creates a threads in a new cell stack(memory)
+void run()    executes the thread
+static void sleep(int millisec) throws InteruptedException     suspends the operation of threads
+void join() throws InterruptedException    wait untill the thread dies
+void interrupt()  intrrupets the thread from the sleep if thread is sleeping 
+boolean is Interrupted()
+boolean isAlive()
+static Thread currentThread()
+String getId()
+String getName()
+void setName(String name)
+long getPriority()
+void setPriority(int Priority)
+boolean isDaemon()
+void setDaemon(boolean flag)
+
+write a program creates 3 threads which display 1to 10 no by pausing 1 each
+
+Note::
+if we start the same thread twic
+we will get IllegalThreadStateException
+
+we can also  call run() method intead of start() method 
+if we call run method then all threads will run 
+in the same call stack where main thread is running..
+
+write a program to control the main thread and change its name and priority
+
+=========================================================================================================================================================
+
+Synchronization:::::::::::::
+it is applied to methods ,staticsmethods and blocks
+when u apply the sychnoirzed keyword then only one thread can access one resource at a time
+
+multiple threads cannot access the same resources concurrently
+
+SYNTAX:::::
+public synchronized void m()
+{}
+here m() method cannot be accessed by more than 1 thread concurrently
+
+ADVANTAGES:::
+
+consistance result
+no thread interference..
+
+interthread communication:::::
+this can be achived by
+wait() notify() and notifyAll() methods 
+These are present in object class
+
+wait()::::
+
+Syntax::
+public void wait(int millisec) throws InterruptedException
+when u call wait() on thread then that thread has to wait and allow other thread to access the resource
+
+public void notify()::::
+when u call notify()
+then one thread resumes exception if it was waiting
+
+
+public void notifyAll()::
+when u call notifyAll() on a thread
+then All thread resumes execution if all ARE waiting
+
+
+
+
+
+=================================================================================================================
+WRAPPER CLASSES:::
+if primitive types are converted into object these are called WRAPPER CLASSES
+it is also called "auto boxing"
+
+primitive type                              wrapper classes
+  byte                                          Byte
+  short                                         short
+  int                                           integer
+  long                                          long
+  float                                         float
+  double                                        double
+  char                                          character
+  boolean                                       Boolean
+
+all wraper classes are IMMUTABLE classes
+these contain lots of methods
+these are present in java.lang.pkg
+
+
+
+INTEGER CLASS
+constructor
+integer(int i)
+Integer(String s)
+
+
+Methods 
+static int parseInt(String s) throws NumberFormateException
+static String toBinaryString(int i)
+static String toHexString(int i)
+static String toOctalString(int i)
+int intValue()    converts wrapper type to primitive type also called "UN BOXING"...
+
+EX::::
+package training;
+public class Wrapper{
+	public static void main(String[] args) {
+		int i=201;
+		Integer i1=new Integer(i);
+		System.out.println(i1);
+		System.out.println(Integer.toBinaryString(i1));
+		System.out.println(Integer.toHexString(i1));
+		System.out.println(Integer.toOctalString(i1));
+		
+		}
+		
+}
+output::::::::::
+201
+11001001
+c9
+311
+
+EX2:::::::::::::::
+package training;
+import java.util.*;
+
+public class Reading {
+public static void main(String[] args) {
+	Scanner s=new Scanner(System.in);
+	System.out.println("Enter the no");
+	String str=s.next();
+	try
+	{
+		int ii=Integer.parseInt(str);
+		System.out.println("U entered"+ii);
+	}
+	catch(NumberFormatException e) {
+		System.out.println("Error"+e);
+	}
+	Double dd=new Double(7597.768);
+	System.out.println(dd);
+	System.out.println(Double.isInfinite(1.0/0.0));
+	System.out.println(Double.isNaN(0.0/0.0));
+}
+
+}
+ output:::::::::::
+U entered789
+7597.768
+true
+true
+
+
+===================================================================================================================================
+COLLECTION OF FRAMEWORK:::::::::::
+it contains collection framework classes and interfaces
+
+ introduction to collection framework 
+
+Framework:::
+it is a ready made architecture contains the set of classes and interfaces
+EG:::
+Spring framework JUNIT FRAME WORK MOCKITO FRAME WORK collection framework etc.
+
+COLLECTION::::::::::
+it is framework used to work with group objects. builds DYNAMIC array used to store generic(same data type) & non generic (different data type)
+elements
+support classes like LinkedList ArrayList Vector HashSet TreeSet HashMap TreeMap
+used to store elements
+traverse the elements 
+used to perform operations on elements like sorting searching etc....
+
+METHODS OF COLLECTION INTERFACES:::::::::::
+
+boolean add(Object o) adds one element into collection 
+Boolean add(Collection c)
+adds the elements of one collection to another collection
+boolean remove(Object o)
+remove the collection of elements
+boolean contain(Object o)
+removes the element is present in collection or not
+int size()
+void clear() deletes all the elements of collection 
+Iterator iterator()
+returns the iterator for collection
+
+
+LIST INTERFACES:::::
+
+SUPPORT DUPLICTE ELEMENTS
+WORKS ON INDEX BASIC for 0 to n-1
+supports generic non generic null elements
+
+METHODS::::
+void add(int index Object o)
+Object get(int index)
+Object set(int index, Object o)
+Object remove(Object o)
+Object remove( int index)
+ListIterator listIterator()
+
+ArrayList::::::::::
+constructor
+ArrayList()
+ArrayList(int size)
+ArrayList(Collection c)
+
+
+used to create Dynamic array
+supports null elementss generic elements not generic elements
+supports duplicate elements
+elements can be inserted from one end 
+modification is slow
+output is in insertion order
+
+EX:::
+package training;
+import java.util.*;
+
+public class ArrayExample {
+public static void main(String[] args) {
+	ArrayList al=new ArrayList();
+	al.add(758);
+	al.add(31.765);
+	al.add(765.0);
+	al.add(true);
+	al.add("hihello");
+	al.add("ajay");
+	al.add("h");
+System.out.println(al);
+	
+}
+
+}
+output::::
+[758, 31.765, 765.0, true, hihello, ajay, h]
+
+
+CREATING GENERIC COLLECTIONS:::
+generic is introduced in jdk 1.5
+used to create type safe collections 
+eli minates type catsing
+detects compile time bugs
+
+use  <>  symbol
+Specifying wrapper classes in the type gnerics...
+create integer 
+
+
+
+
+
+
+
+
+
+useed to creayte Dynamic array
+support nnull element generic elemnets non generic dlements
+supports duplicat elements
+elements canbe inserted from one end
+modification is slow
+output is insertion order
+
+ITTERATING ELEMENTS OF ARRAYLIST
+
+itterate elements presents in interface present in java.util.pkg
+it has 3 methods
+boolena hasNext()
+checks next elemnet
+Object next()
+returns the element
+void remove()
+removes the element while itrating
+
+EX:::
+package training;
+import java.util.*;
+
+public class IterString {
+public static void main(String[] args) {
+	ArrayList<String>al=new ArrayList<String>();
+	al.add("vijay");
+	al.add("vinay");
+	al.add("mohan");
+	al.add("krishna");
+	al.add("chandu");
+Iterator<String> i=al.iterator();
+while(i.hasNext())
+{
+	System.out.println(i.next());
+}
+}
+
+
+}
+output:::
+vijay
+vinay
+mohan
+krishna
+chandu
+
+
+Create a class called student with id name and age add 5 objects in array list and dispaly?????
+
+===================================================================
+linkedlist 
+constructor
+linkledList(int size)
+LinkedList(Collection c)
+
+used to create Dynamic array
+supports null elements generic elements non generic elements
+support duplicate elements
+elements can be inserted from both ends as
+ it uses doubly linked list internaly
+modification is fast (Schuffilling of elements are not requried)
+o/p is insertion order
+
+
+ it provides  6 extra methods 
+void addFirst(Object)
+
+EX:::
+package training;
+import java.util.*;
+
+public class li {
+public static void main(String[]args) {
+	ArrayList<Integer> al=new ArrayList<Integer>();
+	al.add(4);
+	al.add(47);
+	al.add(49);
+	al.add(14);
+	al.add(84);
+	al.add(40);
+	LinkedList<Integer> l=new LinkedList<Integer>(al);
+	for(int i:l)
+	{
+		System.out.println(i);
+	}
+}
+
+}
+output:::
+4
+47
+49
+14
+84
+40
+====================================================================================================================================================
+VECTOR CLASS::::::::
+IT is legecy class
+it is synchronized
+builds the dynamic array
+implements list interface
+
+
+
+CONSTRUCTORS::::
+vector()
+vector(int size)
+vector(int capacity, int increment)
+vector(Collection)
+
+
+METHODS:::::
+void addElements(object o)
+Enumeration elements()
+void add(Object o)
+object elementAt(int index)
+int capacity()
+
+
+vector supports null generic non generic duplicate elements o/p is inserting ordern
+it is synchronized
+
+Enmeration interface is used to travese the elements of legacy classes
+it has two methods
+boolean hasMoreElements()
+Object nextElement()
+
+EX::::
+package training;
+import java.util.Vector;
+
+
+public class vectorexample {
+public static void main(String[] args) {
+	Vector<Integer> v=new Vector<Integer>(3,3);
+	System.out.println(v.size());
+	System.out.println(v.capacity());
+	v.add(11);v.add(12);v.add(13);
+	System.out.println(v.size());
+	System.out.println(v.capacity());
+	v.add(15);
+	System.out.println(v.size());
+	System.out.println(v.capacity());
+	
+}
+}
+output:::
+0
+3
+3
+3
+4
+6
+===============================================================================
+Sortedset is implemented by Treeset
+
+HASH SET::::
+----------------------
+uses hashing technique to store the keys
+support UNIQUE, generic non generic
+sand null elements
+o/p Hashset is ANY ORDER
+
+set interface has same method as List interface But it does not contain listIterator() method
+
+
+insert 5 Strings in Hashset
+
+
+HashSet()
+HashSet(colection c)
+HashSet(int size)
+package praveen;
+import java.util.HashSet;
+
+E::::
+package training;
+import java.util.HashSet;
+import java.util.Vector;
+
+public class vh {
+public static void main(String[] args)
+{
+	Vector<Integer> v=new Vector<Integer>();
+	v.add(23);v.add(43);v.add(493);v.add(463);v.add(93);v.add(3);
+	HashSet<Integer> h=new HashSet<Integer>(v);
+	System.out.println(h);
+}
+}
+
+output::::
+[3, 23, 43, 493, 93, 463]
+
+
+
+HashCode method 
+-------------------------------------------
+SYNTAX:::
+int hashCode()
+
+it is method of object class
+it is integer value u cannot specify its code
+specifies the hashCode of object
+primitive type
+
+equal()methods
+
+it is also a method of object class
+public boolean equals(Object o)
+compares the references of 2 objects.
+
+NOTE::::
+if 2 objects have same code then only both objects are equal
+
+write a program to craete class called product with id name and price insert 3 objects and displayin linkedHashSet
+
+LinkedHashSet constructor
+LinkedHashSet()
+LinkedHashSet(Collection c)
+LinkedHashSet(int size)
+
+ it is same as HashSet but o/p is insertion order support null  generic and non generic???
+
+============================================================================================================================================================
+
+TREE SET:::
+-------------------
+it implements Sorted interface
+constructor
+treeset()
+treeSet(int size)
+TreeSet(collection c)
+treeSet(Compartor c)
+
+
+used to data in heritance structure
+used to store large amount  of data
+o/p is SORTED order
+supports generic type
+if u enter null values u will get null PointerException
+if u enter non generic values u will get ClassCastException
+supports unique values 
+
+EX::::
+package training;
+import java.util.*;
+
+public class Treesetex {
+public static void main(String[] args) {
+	TreeSet<String>t=new TreeSet<String>();
+	t.add("Hyderbad");
+	t.add("goa");
+	t.add("pune");
+	t.add("banglore");
+	t.add("chennai");
+	t.add("noida");
+	for(String city : t)
+	{
+		System.out.println(city);
+	}
+}
+}
+output::::::
+Hyderbad
+banglore
+chennai
+goa
+noida
+pune
+
+
+COLLECTIONS CLASS:::::::::
+
+IT is present in java.util.*pkg
+used to perform operations on collection elements 
+it contain static methods
+public static void sort(List 1)
+public static void sort(List1, comparartor c)
+public static int booleanSearch(List 1, int key)
+public static int min(List 1)
+public static int max(List 1)
+public static void reverse(list 1)
+
+EX::::
+package training;
+import java.util.*;
+
+public class Array {
+public static void main(String[] args) {
+	ArrayList<Integer>t=new ArrayList<Integer>();
+	t.add(116);
+	t.add(56);
+	t.add(83);
+	t.add(48);
+	t.add(29);
+	t.add(30);
+	t.add(100);
+	t.add(-15);
+	System.out.println(t);
+	Collections.sort(t);
+	System.out.println(t);
+	System.out.println("postion of 100 is"+ Collections.binarySearch(t,100));
+	Collections.reverse(t);
+	System.out.println(t);
+}
+}
+
+output::::
+[116, 56, 83, 48, 29, 30, 100, -15]
+[-15, 29, 30, 48, 56, 83, 100, 116]
+postion of 100 is6
+[116, 100, 83, 56, 48, 30, 29, -15]
+
+
+collectioms are used to convert sets to list.
+
+
+
+sorting on user defined class data members storted in collection
+
+
+EX::
+package training;
+
+import java.util.*;
+
+
+public class Setsort {
+public static void main(String[] args) {
+	HashSet<String>h=new HashSet<String>();
+
+	h.add("dinesh");
+	h.add("sai");
+	h.add("ram");
+	h.add("chandu");
+	h.add("suresh");
+	h.add("ramesh");
+	List<String> l=new ArrayList<String>(h);
+	Collections.sort(l);
+	System.out.println(l);
+	
+}
+
+}
+
+output::
+[chandu, dinesh, ram, ramesh, sai, suresh]
+
+
+
+Comparable Interface
+used to compare the date members
+it will compare on any one data members
+but sorting has been done by Collections.sort() method only
+ it has following methods
+
+public int compareTo(object o)
+compare invoking object with specified object
+
+
+
+COMPARATOR INTERFACE:::
+it is present in java.util.*pkg
+used to compare on more than 1 data member of a user class object stored in 
+coolection
+it has a method called int compare(Object o1,Objecyt o2)
+return 0 if o1==o2
+return -1 if o1>o2
+else returns -1
+
+
+
+create a class called office with a name city and no.of employees and store on name and no.of employees
+
+
+MAP INTERFACE::::
+---------------------
+
+MAP<-----STORED DATE<------TREEMAP
+ |
+ |
+ |
+HashMap
+ |
+ |
+LinkedHashMap
+MAP:::
+it is used to store key value pair
+ key must be occur at left side 
+value must occur at right side
+key must be unique
+
+2) INTERFACE:::
+map interface implemented by HashMap and linkedHashMap classes 
+
+SortedMap::
+interface implemented by TreeMap
+
+MAP INTERFACE METHODS:::
+Map put(Object key, Object value)
+Map putAll(MAp m)
+boolean containskey(Object key)
+boolean containvalue(Object value)
+Object get(Object key)
+Set keySet() ---------------------it returns only key values
+Set entrySet()  ------------------returns both key and value
+collection values()
+ 
+
+HashMap::
+
+constructor
+LinkedHashMap()
+LinkedHashMap(int size)
+LinkedHashMap(Map m)
+HashMap
+HAshMAp(int size)
+HashMap(Map m)
+
+
+FEATURES::::
+---------------
+
+supports one null key multiple null values
+key must be unique value can be duplicated
+kay and value both can be generic and non generic
+
+o/p is any order or key basics
+EX:::::
+package training;
+import java.util.*;
+
+class name1 {
+public static void main(String[] args) {
+	HashMap<String, Integer> h= new HashMap<String,Integer>();
+	h.put("abc", 53);
+	h.put("xyz", 53);
+	h.put("efg", 53);
+	h.put("uty", 53);
+	h.put("hac", 53);
+	System.out.println(h);
+	System.out.println("Age of abc"+h.get("abc"));
+}
+	
+
+}
+output:::::::::::::
+{abc=53, efg=53, xyz=53, uty=53, hac=53}
+Age of abc53
+
+
+create a class called employe with name and des and store in linkedHashMap as key??????
+
+cretae a class name called department with dname and city and store in linkedHashMAp as value????
+
+insert 3 object of each class in LinkedHashMap ???????
+Excepted o/p would be 
+Naveen working as engineer in IT depertment at chennai city 
+
+
+EX:::::::::
+package training;
+import java.util.*;
+class Emp2
+{
+    String name;
+    String des;
+    public Emp2(String name,String des)
+    {
+super();
+this.name = name;
+this.des = des;
+}
+}
+class Dept
+{
+    String dname;
+    String city;
+    public Dept(String dname,String city)
+
+
+
+{
+        super();
+        this.dname = dname;
+        this.city = city;
+        
+        }
+}
+
+
+
+public class obj {
+    public static void main(String[] args)
+    {
+        LinkedHashMap<Emp2,Dept> l=new LinkedHashMap<Emp2,Dept>();
+        Emp2 e1=new Emp2("anil","engineer");
+        Emp2 e2=new Emp2("raj","developer");
+        Emp2 e3=new Emp2("john","analyst");
+        Dept d1=new Dept("IT","delhi");
+        Dept d2=new Dept("software","pune");
+        Dept d3=new Dept("Finance","noida");
+        l.put(e1,d1);
+        l.put(e2,d2);
+        l.put(e3,d3);
+        Set<Emp2> empSet=l.keySet();
+        for(Emp2 e:empSet)
+        {
+            Dept d=l.get(e);
+            System.out.println(e.name+" working as"+e.des+"in "+d.dname+"department at"+d.city+" city");
+        }
+    }
+}
+
+
+output:::::::::
+anil working asengineerin ITdepartment atdelhi city
+raj working asdeveloperin softwaredepartment atpune city
+john working asanalystin Financedepartment atnoida city
+
+
+==========================================================================================================================
+TREE MAP:::::::::::
+
+constructor
+TreeMap()
+TreeMap(int size)
+TreeMap(Map m)
+ 
+TreeMap(Comparator c)
+Features::
+supports no null key multiple values
+key must be unique value can be duplicated
+key must be generic and value can be both generic and non generic
+o/p is sorted order on key basics
+implemented sortedSet interface
+
+stores data in tree sthructre
+fast access
+used to store LARGE data
+
+
+cretae a class called person with name and proffession
+
+create a class called country with Cname and captial
+insert 3 objects of a person classs as key and 3 objects of capital class as value sort on proffesion field using comporator interface??/
+EX:::::
+
+
+
+Assignments:::::::::::
+
+enter 8 integers in vector find the min and max value of those integers
+ create a class called course with id name and duration insert 5 objects of course in TreeSet and sort on name using comparate interface
+insert 5 entries of name(key) ans salaries(values) in a hashmap and sort on salaries
+
+
+========================================================================================================================================================
+
+JDK 1.8 FEATURES::::::
+
+1 functional interface
+2 lamda expressions
+3 optional class
+4 collector class
+5 stream API
+6 method reference
+ by using this the 25% code will be reduced 
+
+1 functional interface::::::::::::
+it contains only one abstract method
+it also contain contcrete method of default access specifier
+it is created by using @FunctionalInterface annotation
+
+EX::::
+package training;
+@FunctionalInterface
+interface inter
+{
+	void m();
+	default void method1()
+	{
+		System.out.println("i am default");
+	}
+}
+public class jdk implements inter{
+	@Override
+	public void m() {
+		System.out.println("i am from FI");
+	}
+public static void main(String[] args) {
+	jdk o=new jdk();
+	o.m();
+	o.method1();
+}
+}
+output::::
+i am from FI
+i am default
+
+
+EX::::
+package training;
+@FunctionalInterface
+interface inter2
+{
+	int add(int a, int b);
+}
+@FunctionalInterface
+interface inter3
+{
+	int add(int a, int b);
+}
+public class cc {
+	public static void main(String[] args) {
+		inter2 i =new inter2()
+				{
+			      @Override
+			      public int add(int a, int b)
+			      {
+			    	  return a+b;
+			      }
+				};
+		System.out.println("sum"+i.add(10,55));
+		inter3 i =new inter3()
+		        {
+	              @Override
+	              public int sub(int a,int b)
+	            {
+	    	          return a-b;
+	            }
+		      };
+	}
+}
+
+output:::::
+
+===================================================================================================================================================
+
+Lamda expression::::
+these are the singel line functions
+used to provide an implementation for functional interface methods
+ u can provide the functional interface methods implementation with out specifying method name
+
+SYNTAX:::::
+()-->implementation
+
+
+
+left side represents parameters
+right side represents body
+
+(int i)--> return i;
+
+(int a, int b)-->{
+     System.out.println(a+b);
+}
+
+EX::::::::::::::::::::::::
+package training;
+@FunctionalInterface
+interface inter4
+{
+	int product(int a, int b);
+}
+public class three {
+public static void main(String[] args) {
+	inter4 i=(a,b)-> {
+	
+	return a*b;
+};
+System.out.println("product "+i.product(6,75));
+
+}
+}
+output::::::::::::
+product 450
+
+
+
+
+COMPARATOR::::::::::
+
+ comparator is a functional interface contains one method
+ 
+ public int compare(Object o1, Object o2)
+
+create a clss emp with id name sal insert 5 objects in list and sort on salary use lamda expression usig comparator interface
+EX::::::::
+
+
+package one;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+class Emp{    int id;    String name;    int sal;   
+     public Emp(int id, String name, int sal)
+ {        super();    
+    this.id = id;       
+ this.name = name;        
+this.sal = sal;  
+  }
+
+    @Override   
+ public String toString() 
+{       
+ return "Emp [id=" + id + ", name=" + name + ", sal=" + sal + "]";  
+  }        
+}
+
+public class EmpCollection 
+{  
+  public static void main(String[]args) 
+{       
+ Emp e1=new Emp(1,"aunty",2345);       
+ Emp e2=new Emp(2,"bunty",3345);        
+Emp e3=new Emp(3,"cunty",4345);       
+ Emp e4=new Emp(4,"dunty",5345);       
+ Emp e5=new Emp(5,"eeunty",6345);      
+  ArrayList<Emp>al=new ArrayList<Emp>();      
+  al.add(e1);al.add(e2);        
+al.add(e3);al.add(e4);       
+ al.add(e5);       
+ Collections.sort(al, (p1,p2)->{           
+ if(p1.sal==p2.sal)return 0;           
+ if(p1.sal>p2.sal)return 1;          
+  else return -1;                  
+  });       
+ for(Emp e:al)       
+ {           
+ System.out.println(e );    
+    }        
+System.out.println("---");        
+System.out.println("sort on names");      
+  Collections.sort(al, (p1,p2)->
+){            
+return p1.name.compareTo(p2.name);       
+ });        for(Emp e:al)       
+ {           
+ System.out.println(e );    
+    }        
+}
+}
+ OUTPUT::::
+1 aunty 2345
+2 bunty 3345
+3 cunty 4345
+4 dunty 5345
+5 eeunty 6345
+
+
+
+====================================================================================================================================================
+STREAM API:::::::::::::
+
+
+there are 43+ build in functional interfaces divided in 4 categories
+1 suplire
+2 consumer
+3 predicate
+4 function
+
+supiler::::::::::: 
+it is a functional interface contains get() method takes no argument returns some type 
+
+SYNTAX::::
+@FunctionalInterface
+ public interface Suppiler<T>
+{
+public void accept (T t);
+}
+
+CONSUMER::::::::::
+IIT TAKES
+
+PREDICATE::::::::::::::::::
+
+
+ Predicate it is a Functiona Interface contains test() method takes one argument and returns boolean
+SYNTAX::::
+@FunctionalInterface
+ public interface Predicate<T>
+{
+public void Test (T t);
+}
+
+
+FUNCTION::::::
+
+Function it is a functional interface contains apply() method takes 1 argument of one type and returns another argument of another type
+
+Syntax::
+@FunctionalInterface
+public interface function <T, R >
+{
+public R apply(T,t)
+}
+
+
+
+
+UNARY OPERATOR::
+it is a function interface takes one argu,ent and returns another argument of same type
+
+
+BINARY OPETRATOR:::
+
+IT IS  a functiona;l interface takes 2 arguments and returns another argument of same type
+
+
+OPTIONAL CALSS:::
+it is present in java.util.pkg
+it is a final calss
+used to handle the NullPointerException
+
+METHODS::
+public sastic Optional empty()
+public sastic Optional of(T t)
+public sastic Optional ofNullable(T t)
+public boolean isPresent()
+public T get()
+Public T or ElseThrow(Supplier s)
+
+
+STREAM API:::
+IT IS Present in java.util.* pkg
+it is a class 
+CHARACTERISTICS::
+it is not a in memory data structure
+it is pipe line
+not works on index bases
+elements can be accesed sequencilly and randomly also
+applied to arry and collections
+computed on demand
+that is y these are lazy
+
+
+STREAM OPERATIONS::
+    2 Types
+ Intermediate operations
+ these returns Stream it self
+    METHODS::
+static StreamOf(T t)
+Stream filter (predicate p)
+Stream stored()
+Stream distinct()
+Stream map(Function f)
+static Stream iterate(int seed, UnaryOperator u)
+Stream limit(long n)
+
+
+TERMINAL OPERATORS::::
+
+These perform operations whic returmns other types 
+
+void foreach(Consumer c)
+T collect(Collectors s)
+converts Stream to List/Set/Map
+optional max(Comparator c)
+Optional min(Comparator c)
+Optional reduce(BinaryOperator c)
+boolean anymathch(Function f)
+boolean allmatch(Function f)
+Optional findFirst()
+Optional findLast()
+
+
+EX::::
+ENTER THE 5 ELEMNETS IN ARRAY LIST AND 5 INTEGERS AND DISPLAY USING LAMDAS ????
+package training;
+import java.util.*;
+import java.util.stream.*;
+public class empcollection{
+public static void main(String[] args) {
+	ArrayList<Integer>al=new ArrayList<Integer>();
+	al.add(10);al.add(23);al.add(25);al.add(27);al.add(30);al.add(60);al.add(5678);
+	al.add(56890);al.add(2367);al.add(28);al.add(100);al.add(105);al.add(1890);
+	al.add(482);
+	al.add(19);
+	al.add(12);
+	Stream<Integer>s=al.stream();
+	s.forEach(x->System.out.println(x));
+}
+}
+output::::::::::
+60
+5678
+56890
+2367
+28
+100
+105
+1890
+482
+19
+12
+
+EX2::::::
+package training;
+import java.util.*;
+import java.util.stream.*;
+public class empcollection{
+public static void main(String[] args) {
+	ArrayList<Integer>al=new ArrayList<Integer>();
+	al.add(10);al.add(23);al.add(25);al.add(27);al.add(30);al.add(60);al.add(5678);
+	al.add(56890);al.add(2367);al.add(28);al.add(100);al.add(105);al.add(1890);
+	al.add(482);
+	al.add(19);
+	al.add(12);
+	//Stream<Integer>s=al.stream();
+	//s.forEach(x->System.out.println(x));
+	al.stream().sorted().forEach(x->System.out.println(x));
+}
+}
+output::::::::::::::
+27
+28
+30
+60
+100
+105
+482
+1890
+2367
+5678
+56890
+
+
+
+
+
+enter the 10 integers in arraylist multiply each number with 5 and display first 6 no????
+package training;
+import java.util.*;
+import java.util.stream.*;
+
+
+public class five {
+	public static void main(String[] args) {
+		Stream<Integer>s= Stream.of(22,11,77,88,54,67,33,64);
+		s.map(f->f*4).limit(6).forEach(c->System.out.println(c));
+	}
+
+}
+output:::
+88
+44
+308
+352
+216
+268
+
+
+EX2::::::::::::::::::::::::::::::
+package training;
+//import java.util.*;
+import java.util.stream.*;
+
+
+public class five {
+	public static void main(String[] args) {
+		Stream<Integer>s= Stream.of(22,11,77,88,54,67,33,64);
+		s.map(f->f*4).limit(6).forEach(c->System.out.println(c));
+		long count=s.filter(x->x%2!=1).count();
+		System.out.println("No of odd no "+count);
+	}
+
+}
+output::::::::::::::
+308
+352
+216
+268
+
+
+
+
+COLLECTOR CLASS:::::::::::::::::::::::::::::::::(java.util.stream.*pkg)
+
+IT is also a final class used to store data into collections/map
+
+METHODS:::
+
+List toList()
+Set toSet()
+map toMap()
+
+
+EX::::::
+package training;
+import java.util.*;
+import java.util.stream.*;
+
+
+public class six {
+public static void main(String[] args) {
+	ArrayList<String> al=new ArrayList<String>();
+	al.add("amit");
+	al.add("ajay");	
+    al.add("arjun");
+    al.add("amar");
+    al.add("mohan");
+    al.add("krishna");
+    al.add("chitti");
+    al.stream().filter(z->z.startsWith("a")).map(x->x.toUpperCase()).limit(5)
+    .forEach(a->System.out.println(a));
+
+
+}
+
+}
+output::::
+AMIT
+AJAY
+ARJUN
+AMAR
+
+
+
+

@@ -1,0 +1,168 @@
+create table emp(id int(3), name varchar (10),city varchar(10));              -u root -p           mysquld--
+
+
+
+           ALTER COMMANDS
+alter table emp add salary decimal(10,4);
+alter table emp add bonus;
+alter table emp add primary key (id);           for adding primary key..
+alter table emp modify name char(15);
+alter table emp change column name firstname char(15)
+rename  table emp to emp1         for renaming
+truncate table emp1;
+
+operators:
+
+arithmatic: +,-,/,%,*
+relational
+logical
+comparision
+
+
+emp2 for performing operators:
+create table emp(id int(3), name varchar(10), dob date,dname varchar(10), des varchar(10), salary decimal(10,4), city varchar(10));
+
+insert into emp2 values (1,'ajay',2000-10-25,'IT','engg',40000,'pune'),(2,'vijay',2000-05-05,'IT','engg',42000,'goa'),(3,'harsha',2000-05-10,'IT','dev',43000,'pune'),(4,'asha',1999-04-20,'IT','dev',30000,'pune'),(5,'geetha',1999-04-20,'test','engg',33000,'chennai'),(6,'sunil',1999-04-18,'IT','test',43000,'goa'),(7,'raj',1999-02-20,'hr','engg',42000,'pune'),(8,'raju',2001-02-20,'hr','engg',30000,'pune'),(9,'rajeev',2001-03-20,'sales','engg',30000,'goa');
+select name,salary,city,des from emp2 where des='test' and city= 'chennai' and salary >25000;
+select name,des,dname from emp2 where des not in ('engg') and dname='IT';
+select name from emp2 where name like '%a';
+select name from emp2 where name like '_a%';          (_ is for first place of the word)
+select name from emp2 where name like '%j%';          (% % is used to show the words with that letter)
+select * from emp2 order by des desc,name asc;        (this is used for showing from small to large or large to small)
+select distinct dname from emp2;                      (this is used to show different words without repeating)
+select distinct dname,des from emp2;                  (this is used to show different names together )
+
+
+
+
+FUNCTIONS:
+
+1  BUILD IN FUNCTIONS:
+           DATE:(adddate, ) 
+           MATH STRING:(upper,lower,instr,substr,ipad,rpad) 
+           FLOW OF CONTROL:
+           MISLANIOUS(greatest, least,coalesce:this returns 1st non null expression, 
+                      null: if first parameter is null then it will return 2nd else it returns 1st  ex:select ifnull(3>2,100) (it gives true that is 1) 
+                      nullif: if both expressions are equal it returns null else it returnas first expression ) 
+           FUNCTION
+           set opetarors:union: used to combine the result of 2 tables for this 2 tables strut must be same must select co1 of the 2 table with same order same no same datatype , 
+                         unionall: combine the results of tables by removing duplicates.
+
+joints:
+       inner join : it gives common point of both tables uses join &on keywords
+       equi join: same as innerjoin, returns the common rows of both tables
+        left join: returns the common rows of both tables also return all unmatched rows of left table and for un matched rows of left table any row selected from right table they are marked with null
+       right join: returns the common rows of both tables also return all unmatched rows of right table and for un matched rows of right table any row selected from left table they are marked with null
+       cross join:it generates cartesian point of  join ex: select * from product,sales;
+       self join : creates flat structure  internelly it creates a 
+
+                  select c1.name from emp e1, emp e2
+                  where c1.des=c2.des
+                  and c2.name='wasim';
+2  AGGRAGATE FUNCTION:
+               THIS IS a single row function,
+                sum avg count min max
+
+
+
+         sub query:
+                   when a query is writtrn within another it is called subquery. this frist query is evaluated and sends o/p outer query so finally the result will returned to user u must write sub query in round brackets 
+                   it uses in all any > < <= >= = <> exists not exists
+         syntax: col1,col2 from tab1 
+                where expr(select col1 from tab where condition);
+         types of sub query:
+                single row:  we can reight sub query in < > = <= >=  opetarors they are single sub query    EX:select name, max(salary) from emp where salary=(select max(salary) from customer);
+                                                                                                EX:select name, max(salary) from emp where salary>(select max(salary) from emp where des='tester');
+                 multi row:  write sub query using exists not exists all any operators they are called multiple row sub queryEX: select name, dname from emp where id in(select id from customer where dname='it');
+                                                                                                                             EX: select name, salary,dname from emp where salary > all(select salary from emp where dname='health');
+                                                                                                                             EX: select name, salary,dname from emp where salary > any(select salary from emp where dname='health');
+                                                                                                                             EX: select name, dname,salary from emp where salary in(select max(salary from customer group by dname)); for giving max salary from the table and from each department.
+                                                                                                                                 select name, dname, salary from emp where salary in(select max(salary from customer group by dname having max(salary)>50000)); 
+                 inline:
+                 nested :
+               co related:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+select avg(salary), dname from emp group by dname having avg(salary)>30000      having is used to show the 
+select dname, count(*) from emp group by dname having count(*)>=3;              this is used to show thst how many are from same department and what is the total count
+select avg(salary), des from emp group by des having avg(salary)<=40000         this is used to show that avg salary and des of employe whos salary is below 40000
+
+
+
+           multiple row functions:
+
+select lower(name) from emp
+select upper(name) from emp 
+select substring('coforge',3)
+select instr('coforge','g')    this is used to show the place of the letter in that word
+select length('ajay')
+select lpad('coforge',10,'*')   ***coforge
+select rpad('coforge',15,'*')   coforge********
+select instr(name,'a')from emp  it displays the name which carries 'a' and its place in words
+
+
+now() is used to show current time
+current_date() is used to show todays date
+select extract (hour from '2000-01-01', 22:22:22);
+select name, dob from emp where extract(month from dob)=5;
+select count(*), extract(month from dob) month_wise from emp group by month_wise;
+select dname, round(avg(salary),2) from emp group by dname; 
+truncate    in case it is greater than 5 also it does not shift to next number
+round        in case it is graeter than 5 it will move to next number
+
+
+new table
+create table sales(id int(3), orderon varchar(10), quantity int(8));
+create table product(id int(3),name varchar(10),price int(8));
+insert into sales values(1, 's01',6),(10,'s10',5),(3,'s03',6),(4,'s04',7),(8,'s08',3);
+insert into product values(1, 'laptop',45454),(2,'mobile',12345),(3,'iphone',45678),(4,'ac',32323),(5,'fridge',34343);
+select p.id, p.name, s.id, s.orderno, s.quantity from product p inner join sales s on p.id=s.id;
+select p.id, p.name, s.id, s.orderno, s.quantity from product p inner join sales s using(id);
+select p.id, p.name, s.id, s.orderno, s.quantity from product p left join sales s on p.id=s.id;
+
+
+
+analytical function:
+ limit:how to display the first 3 rows of the emp table : select * from emp limit 3,4; this is used to give the only particular limit 
+       EX: select salary from (select salary from emp order by salary desc) customer limit 1;
+ over: 
+ row_number():select name, salary,row_number() over(order by salary desc)from emp;
+ rank() : select name,salary, rank() over(order by salary desc) from emp;   2)select min(salary) from (select* from (select* from emp order by salary desc)emp limit 2)emp;
+dense_rank():
+
+co related sub query: inner and outer quries are symulatniously processed for every row, and this is called row by row process.
+     EX : display the names of the emp[ who earns the salary> the avg salary of there department?????
+          select dname, avg(salary) from emp group by dname
+          select name, salary, dname from emp outer1 where salary>(select avg(salary)from emp where emp.dname=outer1.dname);
+
+
+
+
+TCL COMMANDS:
+
+commit:
+savepoint:
+roll back:
+
+
+
+
+
+
+

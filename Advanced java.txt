@@ -1,0 +1,186 @@
+JDBC::
+JAVA DATA BASE CONNECTIVITY
+
+HIBERNATE
+JPA
+SPRING
+SPRING BOOT
+
+
+
+JDBC:::::::
+it is a API makes java application talk with data base
+it is present in java.sql.*pkg
+odbc is used as application to talk with data base before jdbc
+[ODBC::::OPENED DATA BASE CONNECTIVITY]
+
+
+ DRIVER:::
+it is s/w component converts java calls to data  base
+
+JDBC
+ |
+ |
+ |
+JAVA APPLICATION--------->JDBC DRIVERS------>DATA BASE
+
+There are totally 4 kinds of drivers
+
+type 1 driver::::::::::::::::::::::::::::
+-------------------
+
+it is also called JDBC ODBC driver
+here the jdbc calls passes through saperate componet
+odbc bridge. it creates lots of overhead 
+it is coded in c it ios not plateform independent
+it has to be installed into computer
+slow used for production purpose
+
+JDBC.API
+  |
+  |
+  |
+  |
+JAVA APPLICATION--------> JDBC ODBC BRIDGE DRIVER--------> ODBC DRIVER VENDOR DATABASE LIBRARY---------> DATABASE
+
+
+
+type 2 driver
+type 3 driver
+
+
+type 4 driver::::::
+------------------
+IT is also called pure java thin driver
+it is also calls directly converted to database calls 
+it is very fast it is coded in purley in java it is platform independent
+not to be installed into computer
+fast used for development purpose 
+but it is database dependent
+
+JDBC API
+  |
+  |
+  |
+  |
+JAVA APPLICATION----->THIN DRIVER----->DATABASE
+
+
+
+JDBC uses to packages 
+1 java.sql.*;
+2 javax.sql.*
+
+1 java.sql.*::::::::::
+
+ it has following classes 
+DriverManager class
+it registers the driver
+
+METHODS:::
+public static Connection getConnection(String url,String username, String password) obtain connection
+
+connection interface:::::::
+--------------------------------
+used to obtain the connection 
+connection is session between application and database
+
+METHODS:::
+Statement createStatement() createsa SQL statement 
+preparedStatement prepare statement(String s)
+create parameterized SQL statements
+CallableStatement prepareCall(String s)
+calls stored procedure
+Statement addBatch(String s)
+create statements in batch
+void commit()
+void close()
+void rollback()
+
+JDBC program to test connection with mysql database????????
+package jdbc;
+import java.sql.*;
+import java.sql.Connection;
+public class testconnection {
+	public static void main(String[] args) {
+		try
+		{
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/mysql","root","cfg@1234");
+			System.out.println("connected!! "+conn);
+			String s="create table emphyd(id int(2), name varchar(10),age int (3))";
+			Statement st=conn.createStatement();
+			st.executeUpdate(s);
+			System.out.println("created!");
+
+
+
+
+		
+		}
+		catch(Exception e) {
+			System.out.println("ERROR "+e);
+		}
+		
+	}
+
+}
+
+output:::::::::::
+
+ use mysql
+Database changed
+mysql> desc emphyd;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int         | YES  |     | NULL    |       |
+| name  | varchar(10) | YES  |     | NULL    |       |
+| age   | int         | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set 
+
+===================================================================================================================================================
+
+
+STATEMENT INTERFACE:::::::
+
+ used to create SQL statements
+
+METHODS:::
+ 
+int executeUpdate(String s) execute DML statements
+boolean execute(String s) executes dml statements
+ResultSet executeQuery(String s)\
+executes DQL statements
+int[] executeBatch() executes batch statements
+create table hyderbad in mysql using jdbc
+
+executing BATCH STATEMENTS Using statement interface
+
+write a program to insert/delete/update 1 row into database
+
+
+
+
+
+
+how to retrive the data from database??
+ResultSet interface
+ResultSet is a table of row and coloumn
+
+when u retrive data from dxatabase/ table that data stored in ResultSet. this data is traversed from ResultSet pointer
+
+
+u can obtain ResultSet by calling
+Statements executeQuerey() method
+
+METHODS:::
+boolean next()
+String getString(int colidex)
+ResultSetMetadata getMetaData()
+
+
+
+
+

@@ -1,0 +1,108 @@
+:::::::::::::::::::::::::::::java:::::::::::::::::::::::::::::
+
+applications of java:
+ lead to develop console based app
+ lead to develop web applications
+ lead to develop enterprise app
+ dynamic application
+ used to develop mobile and desktop applications like anti virus ,acro bat reader , robatics, smart card games, internet applications 
+
+what forms of applications we can develop in java???
+ j2se consule 
+j2ee
+web jee
+java fx   rich internet applications 
+jme
+
+Characteristics of java::::
+
+secure, simple, multi threded, object oriented ,platform independent , architecture neutral,
+ distributed, high performance,interpeted, robust: strong, exeption handling: try ,catch, throw, finally , dynamic
+here java does not contain pointers so it is simple than c
+
+oops:::::::::: 5 pillars of java:::::
+inheritance
+exectpition
+polymorphism
+absorption
+Aggregation::: if one cls invloves another cls this is called aggregation
+
+
+java compilation::::
+javac filename.java used to compile the programm and generates .java
+java filename
+
+
+JVM::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+jvm is basically interperter for byte code
+jvm is not platform independent
+portable
+automatic garbage collections, multi threading and multi tasking: performing different tabs at same time like background apps
+dynamic: it runs the run time applications like bus regervation ticket bookings
+distributed: we can execuite the program in different systems by using this distribution (one to one)
+strongly types::: it is not a case senstive
+
+
+difference b/t JDK,JVM,JRE
+:::::::::::::::
+
+jvm java virtual machine 
+ it is an interpreter for byte code
+ it is not a platform independent
+
+jre java run time environment
+contains jvm+class library files
+
+jdk java development kit
+contains JRE+ development tools like javac javap javah java appletviewer rmic etc
+
+
+Architecture of JVM:::::::::
+components: class loader--bite code verifier ,interpreter, run time then finally output
+pc register: bite code instructions execute s currently
+
+memories used by JVM::
+heap memory::heap memory values to the object allocated dinamically or @ runtime
+stack memory::: contains the local varibles (variables declared inside methods) method code temporary results
+pass memory:::stores values for static varibles
+
+files to write java program::
+filename must be same as class name
+  one file contains more than only one cls must be public which contains main method by that class name only must save the file
+
+ 
+
+
+data types in core java
+name             width         range               default value
+ 
+ byte              1 byte        -128 to 127             0
+short              2 byte        -32768 to 32769         0
+int                4             -214 crore to 214 cr    0
+long               8             very very large         0L
+float              4             single precious point   0.0f
+double             8             double precious point   0.0
+char               2             
+boolean            1 bit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

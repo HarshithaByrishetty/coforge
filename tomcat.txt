@@ -1,0 +1,675 @@
+TOMCAT:::
+
+INTRODUCTION TO WEB APPLICATION:::
+ If any application runs from the browser that application is called web application
+in java u can develop web application using Spring MVC, SERVLETS, JSRs structs etc..
+it uses client server architecture
+
+means client sends a request to server 
+server process the request through spring mcv/ jsp/ servlet
+
+here server is called "web server"/ "application server"
+
+we are using web server
+Spring MVC
+
+WEB APPLICATION TERMINOLOGIES::
+
+1 static/dynamic terminilogies::::
+    in sastic web page information is statice we will not get the dynamic info
+eg::
+html css
+DYNAMIC web page
+  generates dymanic info
+EG::: railway website
+shoopig cards
+
+2 http protocol:::
+    it is also called hyper text transfer protocol
+ used to exchange informantion/ send request
+from client to server on internet
+
+3 http request::::::::
+ if client makes request to server on using http protocol it is http request
+if the server process the http request and deliver response to client through it is called http request
+it contains content type/ contetn length/ browser info/port no etc..
+it is also called HTTP response Headers
+
+4 get/post request:::
+ http get request use to retrive the  resourse dynamically 
+ it is fast 
+ it is not secure as request parameters are exposed in url address
+ it is bookmark
+ we can send max 1024 bytes of information on web
+
+POST REQUEST:::
+http get request use to retrive/send/update the  resourse dynamically 
+ it is slow
+ it is very much secure as request parameters are  not exposed in url address
+ it is  not bookmark
+ we can send max unlimited bytes of information on web
+
+5 web server/ container::
+ it is a piece of software used to process the client request
+it provides runtime environment to execute web components like jsp servlet mvc structs etc
+EG:::::
+ apache tomcat/ jetty
+web container is available each web server contains the web container responsible to execute web comments
+
+6 MIME type::::
+MULTI PURPOSE INTERNET MAIL EXTENSION
+it tells the data type of the content exchanged between client and server
+ for plain text mime type is text/plain
+           html             text/html
+           json             application/ json
+           xml              application/xml
+           image            application/jpeg
+ 
+
+SPRING MVC::::
+Full form of mvc is MODEL VIEW CONTROL
+Model::: it represents the state of the application it contains bussiness logic
+ in spring mvc Controller class is used to model  
+view:: it represents the presentation logic 
+ tells how to display the o/p?
+ Spring mvc we can use jsp/thyme leaf as a view
+Controller::
+ it acts as interface between model and view 
+ it accepts the request from web server
+ mvc is adesign pattern
+ADVANTAGES::
+ Maintains the code if the application size grow large navigation of control is centralized  
+
+
+SPRING MVC::
+ it is module to develop the web application
+
+ADVANTAGE::
+supports dependency injection 
+flexible mapping
+lossely coupled code
+supports declaritive /programmatic apporach
+supports annotations 
+esay to test and maintain
+
+
+ARCHITECTURE OF SPRING MVC::::
+
+WEB BROWSER---->FRONT CONTOLLER---- model---> CONTROLLER----- model-----> VIEW-------> WEB BROWSER
+
+
+Request ---1------>DISPACTURE SERVLET ----2----->HANDLERMAPPING -----3------->CONTROLLER  -----5------>VIEW RESLOVER---6--> VIEW
+                          |
+                          |
+                          ----4--------->MODEL and VIEW
+
+EG DIA:: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.javatpoint.com%2Fspring-mvc-tutorial&psig=AOvVaw2upX6_
+         EtH7VYR8AP0GZyN1&ust=1663823168454000&source=images&cd=vfe&ved=0CAkQjRxqFwoTCNDstLqOpfoCFQAAAAAdAAAAABAD
+
+1 when Client send the request to the webser webserver checks the web.xml
+2 if the web.xml contains FrontController Entry (DispatchServlet) then webserver deliver request to dispatch servlet
+3 Dispatch servlet checks the configuration file called spring-servlet.xml and gets the HandlerMapping name from controller(contains 
+bussiness logic)
+4 after getting handlermapping DispatchServlet sends request to controller
+5 controller process the request and sends the model and view Object to dispatcher servlet
+6 dispatcher servlet contact ViewReslover to reslove view
+7 view Resolver send the name of the reslover to DiapatchServlet
+8 DispatcherServlet delivers response to the view
+9 finally through use the view user gets the result in the form of dynamic web page
+
+
+
+
+ANNOTATIONS OF SPRING MVC::
+
+1 @Controller
+ it is a class level annotation contaiuns the presentation logic. it marks class as controller
+2 @RequestMapping("/urlpatternname")
+it tells by what url patytern requst is mapped to which controller 
+it is method/class level annotation
+it is present in
+org.spring.framework.web.bind.annotation.*pkg
+
+
+WRITE MVC POGRAM TO DISPLAY HELLO WORLD
+
+multiple controller example
+create 2 links
+java tutorial
+angular tutorial
+
+
+
+
+model interface::
+model interface is used to store spring mvc application
+data
+it contains the data in strings objects maps collections
+etc
+it is present in org.springframework.ui.*pkg
+
+
+METHODS::
+void addAttroibute(String object String value)
+void addAllAttribute(Collection c)
+void addAllATtribute(Map c)
+
+
+@RequestParam annotation
+used to read information 
+
+
+
+
+
+
+
+how to display image??
+3 steps
+1 create resources folder 
+inside that create image folder
+inside that paste image
+
+2 in the spring servlet.xml
+configure image using
+<mvc.>
+
+
+
+create a clss called person
+class person
+{
+String name;
+Date dob;
+int age;
+List<String> languages;
+String country;
+String gender;
+}
+
+
+create JSP form using spring tags and populate the form values using spring MVC
+
+Designing form using spring tags
+Spring mvc provides the following form tags
+<form: input>
+<form: radio>
+<form: checkbox>
+<form:button>
+<form:form>
+<form:select>
+
+@ModelAttribute annotation
+it is field level annotation used to bind the jsp form
+field values to the controller class method parameters
+  through POJOP class
+
+
+
+
+
+Spring MVC validation:::
+
+validation is nothing but verifying the correct input is given or not
+ like name must be between 3 to characters age must be integers between 20 to 60 etc..
+
+Spring MVC uses Hibernet validator for validation 
+Hibernate validator uses javax.validation API
+it uses following annotations
+
+@Size
+it is feild level annotation tells the width of the property
+
+@NotNull
+ it is field level annotation tells the feild must not be blank
+
+@NotEmpty::
+it is feild level annotation tells the feild must not be blank
+
+@Patten
+it perform validation on feilds using pattern matching through regular expression
+
+@min
+specifies the min value for integer
+@max
+specifies the max value for integer
+@past
+used for date validation u must enter date < than system date
+@future
+u must enter the date > the system date
+ all the above annotations present in javax.validation.constraints.*pkg
+@Valid
+it is used in controller class at the feild level to check wether the pojo class  has applied validation or not
+
+Spring web provide one interface called
+BindigResult to check wether form has validation errors or n ot
+method
+boolean hasEreors()
+
+to achive validation we must use hibernate-validator dependency
+
+create a class called student with name age and dob develop the Spring MVC application
+ do the folloowing validations
+1 name must be character with 5 to 10 length
+2 age must integr between 20 to 30
+3 dob must be less than system date and populate the form values
+
+
+Hibernate  integration with Spring MVC
+
+using ORM module configure
+LocalSessionFactoryBean class  this will configure the hibernaet process
+
+it is present on org.SpringFramework.orm.hibernate5.LocalSessionFactoryBean
+used to 
+configure DataScource object
+configure Hibernateproperties
+configure Mapping class
+
+org.SpringFramework.orm.hibernate5.HibernateTransactionManager
+class
+it configure Hibernate Transactions
+u need import tx name space in xml file
+and enable
+
+@Transactional annotation
+it is class/ method level annotation
+use to achive the transaction
+u can enable the transactional annotation using 
+<tx:transactional-driven transaction-manager=""/>
+
+
+code::::
+[new project
+goto web webapp
+artifactid is springmvchibernate
+create a package called praveen
+finish]
+xml:;
+
+
+<properties>
+<project.build.socrceEncoding>UTR
+<maven.compiler.source>17</maven.compiler.source>
+<maven.compiler.target>1.8</maven.compiler.target>
+</properties>
+
+
+<dependency>
+<groupid>org.Springframework</groupid>
+<artifictid>springweb webapp</artifictid>
+<version>5.3.0</version>
+</dependency>
+
+<dependency>
+<groupid> org.hibernate</groupid>
+<artifictid>hibernate-core</artifictid>
+<version>5.3.3.final</version>
+</dependency>
+
+<dependency>
+<groupid>javax.servlet</groupid>
+<artifictid>jstl</artifictid>
+<version>1.2</version>
+</dependency>
+
+<dependency>
+<groupid>mysql</groupid>
+<artifictid>mysql-connector-java</artifictid>
+<version>8.0.22</version>
+</dependency>
+
+<dependency>
+<groupId>org.springframework</groupId>
+<artifactId>spring-webmvc</artifactId> 
+<version>5.3.0</version>
+</dependency>
+
+<dependency>
+<groupId>org.hibernate</groupId>
+<artifactId>hibernate-core</artifactId> 
+<version>5.3.3.Final</version>
+</dependency>
+
+<dependency>
+<groupId>org.springframework</groupId> 
+<artifactId>spring-orm</artifactId> 
+<version>5.3.0</version>
+</dependency>
+
+<dependency> 
+<groupId>org.springframework</groupId>
+<artifactId>spring-jdbc</artifactId> 
+<version>5.3.0</version>
+</dependency>
+
+<dependency>
+<groupId>mysql</groupId>
+<artifactId>mysql-connector-java</artifactId>
+<version>8.0.22</version>
+</dependency>
+
+<dependency>  
+<groupId>com.sun.xml.bind</groupId> 
+<artifactId>jaxb-core</artifactId>  
+<version>2.3.0.1</version>
+</dependency>
+
+<dependency> 
+<groupId>javax.xml.bind</groupId>
+<artifactId>jaxb-api</artifactId>  
+<version>2.3.1</version>
+</dependency>
+
+<dependency>  
+<groupId>com.sun.xml.bind</groupId>
+<artifactId>jaxb-impl</artifactId>
+<version>2.3.1</version>
+</dependency>
+
+<dependency>  
+<groupId>org.javassist</groupId>
+<artifactId>javassist</artifactId>
+<version>3.25.0-GA</version>
+</dependency>
+
+
+
+create a class called product with id name and price
+
+
+class product
+{
+  int id;
+  String name;
+  int price;
+}
+write Speingmvc hibernate program to insert and display dynamically from jsp form
+
+
+package harshi;
+
+import javax.persistence;
+@Entity
+@Table(name="prodtable")
+public class product {
+	 @id
+	 @GenetaredValue(startegy = GenerationType.AUTO)
+	 @Column(name="p_id",length = 4)
+	int id;
+	 @Column(name="p_name", length = 15)
+	String name;
+     @Column(name="price",length = 6)
+	int price;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
+}
+
+
+
+
+productdao class::
+
+package harshi;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.bean.factory.annotation.Autowried;
+import org.springframework.sterotype.repository;
+@Repository
+
+public class productdao {
+@Autowried
+SessionFactory sessionFactory;
+public product insert(product p)
+{
+	Session s=sessionFactory.getCurrentSession();
+			s.presist(p);
+	        return p;
+}
+public List<Product> get()
+{
+	Session s=sessionFactory.getCurrentSession();
+	Query q=s.createQuery("from product");
+	List<Product> l=q.list();
+	return l;
+}
+}
+
+productcontroller::
+
+package harshi;
+import org.springframework.beans.factory.annotation.autowired;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import java.util.*;
+
+@Controller
+
+
+public class productcontroller {
+ @Autowried
+ ProductService productService;
+ @RequestMapping("/get")
+public String get(Model m)
+{
+	 List<product> l=productService.getAll();
+	   m.addAttribute("p",l);
+	   return "output";
+}
+ @RequestMapping("/save")
+ public String save(Model m)
+ {
+	 m.AddAttribute("Product",new Product());
+	 return input;
+ }
+ @RequestMapping("/submit")
+ public String submit(@ModelAttribute("product")product p)
+ {
+	 productService.insert(p);
+	 return "redirect:/get";
+
+}
+
+}
+
+
+
+
+
+SPRING REST MODULE:::
+it is also called Representation state transfer
+it used client server architecture
+it supports multiple data formats
+like json(java script object notation)
+xml text plain image and html
+Heart of the REST Module is resourse which is represented by uri
+in the uri if u change the uri according that u get the source
+EG::
+http://localhost:8080/First/student/1
+the above is called url
+Student/1
+is called uri
+
+if u change uri to 
+student/2
+u will get 2nd student info
+
+here info can be data  formats like xml,html etc
+REST supports client sends the http request to server 
+server treats each request as new request as http is a stateless protocol
+server process the request and send the response as dataformate
+spring rest default uses JSON data format
+{
+    "name":"ajay"
+}
+
+
+
+
+spring rest uses 4 methods:::::::::::
+-----------------------------
+GET POST PUT DELETE 
+
+GET  is used to retrive a resource
+
+POST used to save/ create/add a new resource
+
+PUT used to update/modify a resource
+
+DELETE used to delete/remove the a resource
+
+
+
+
+Spring REST annotations:::
+------------------------------
+1 @RestController::
+ it is a calss level annotation 
+introduced in spring 4.-0
+@RestController=@Controller+@ResponseBody
+if we use controller we have to use rewponse body
+it we use resrcontroller there is no use of responce body
+marks class a RestController and o/p will be presented in xml/ json formats in the form of URI
+
+2 @ResponseBody::
+it is a method level annotation used to hold the response
+
+3 @PathVariable::
+it is field level annotation used to inject url parameters dynamically
+
+4 @RequestBody::
+it is field level annotation used provide a parameters for REST request
+
+5 @GetMapping::
+used to retrive 
+used at mapping level same as 
+@RequestMapping(value="",method=RequestMethod.PUT)
+
+6 @PostMApping::
+used to create 
+used at mapping level same as 
+@RequestMapping(value="",method=RequestMethod.PUT)
+
+7 @PutMapping::
+used to modify
+used at mapping level same as 
+@RequestMapping(value="",method=RequestMethod.PUT)
+
+8 @DeleteMapping::
+used to Delete
+used at mapping level same as 
+@RequestMapping(value="",method=RequestMethod.PUT)
+
+
+
+U NEED TO USE
+jackson-databind convert java type to JSON types
+
+
+write a spring mvc program to display helloworld with out using xml file 
+use java based configuration approach
+
+
+to test rest application we must use the POSTMAN tool 
+
+WRITE A SPRING REST APPLICATION TO DISPLAY HELLO WORLD??
+
+
+
+<dependency>
+<groupId> org.springframework</groupId>
+<artifactId>spring-webmvc</artifactId>
+<version>5.3.0</version>
+</dependency>
+
+
+<dependency>
+<groupId>com.fasterxml.jackson.core</groupId>
+<artifactId>jackson-databind</artifactId>
+<version>2.9.5</version>
+</dependency>
+
+
+we have to create a java folder
+new class called helloworld
+
+class:::
+package harshi;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class helloworld1 {
+@GetMapping("/hello1111"
+public string sayhello()
+{
+
+	return"<h1><b>Welcome to spring application";
+}
+
+}
+
+
+xml file::
+
+<?xml version="1.0"?>
+<beans
+xmlns="http://www.springframweork.org/schema/beans"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:mvc="http://www.springframework.org/schema/mvc"
+xmlns:xsi="http//www.w3.org/2001/XML.Schema-instance"
+xsi:schemaLocation="http://springframework.org/schema/beans"
+http://www.springframweork.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/mvc
+http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+<context:annotation-config></context:annotation-config>
+<context:component-scan base-package="harshi"></context:component-scan base-package="harshi">
+<mvc:annotation-driven></mvc:annotation-driven>
+</bean>
+
+
+
+
+create a class called product with id name category and price insert 7 objects in set and develop the spring rest application 
+to display the output in sorted orderproduct names..
+
+for this we have to create 4 classes
+1 control
+2 pojo
+3 xml
+4 web xml
+
+
+write a spring rest application display following sentence 
+mr john joined to cts company on 20 mar 2020 in bangloure location at branches 
+MG road Eco space white field Electronic city
+
+inject name,doj, cname, city branches as url parameters.
+
+
+write a Spring rest application to find the seum of 2 numbers 2 numbers must suppiled as i/p from keyboard
+
+
+
+

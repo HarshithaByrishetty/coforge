@@ -1,0 +1,54 @@
+SPRING 5.3 ANNOTATIONS:::
+------------------------------------
+JSR annotations
+@Autowire
+@qulifier
+@Bean
+@Configuration
+@Scope
+
+
+STERO TYPE ANNOTATION::
+----------------------------------------
+1 @component  
+2 @Repository
+3 @Service
+4 @Controller
+
+1  @Autowire annotation::::
+  it is a method feild or constructor level annotation used to collaborate the beans
+
+Autowire is 4 types::
+1 byName-- in this id of one bean must be same as property of another bean
+2 byType-- in this one bean collaborates(wires) with another bean by their type be using setter injection
+3 constructor same as--by type  but constructors are used instead of setter methods3
+
+NOTE::
+ in byatype / constructor autowire if more than 1 instance of same bean exists container returns error
+
+to use annotation import contex name space in xml file an add <context:component-scan/> tag
+
+
+u must use ApplicationContext IOC
+
+
+EX::::
+
+class Department
+{
+  String name;
+  String city;  
+}
+class Emp
+{
+  String name;
+  String des;
+Department dept;
+}
+Here Emp depends on Dept
+
+using @Autowired achive DI
+ 
+o/p:::: Govind is engineer worink in IT Department at Goa 
+
+

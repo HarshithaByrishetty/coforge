@@ -1,0 +1,204 @@
+SPRING FRAME WORK:::::::::::::::::
+--------------------------------------------------------
+SPRING core
+SPRING MVC
+SPRING REST module
+SPRING Boot
+SPRING Boot console application
+SPRING boot DATA JPA MODULE
+SPRING Boot MVC
+SPRING Boot Rest appliction
+SPRING Boot Cloud micro services
+
+
+
+SPRING FRAME WORK???
+spring is developed by Rodd John son in 2002 
+it is also called frame work of frame work
+u can integrate spring with hibernaet, struts, as well as JUNIT  mockito e.t.c
+ 
+
+Spring is also used to dependency injection ????
+
+What is dependency injection??
+ part of the code is seperated from the program and kept in another file is called dependency injection
+
+separted code is called "dependency"???
+
+EG:::
+suppose if u want to write a program to dispaly the name and age  and city of the person 
+if u write presentation logic ,bussiness logic as well  data access logic in one file 
+it is not a depenedency injection
+it is called tightly coupled code
+
+ if u write presentation logic ,bussiness logic as well  data access logic in seperate file 
+it is called dependency injection
+it is called loosely coupled code
+
+
+ADVANTAGES OF SPRING FRAME WORK:::
+ predefined templete:
+         spring supports classes like JDBC templets to connect to the database
+Dependency injection:::
+ u can write a spring program in a such a way that part of the dependency is seperated from program and kept in another file
+loose coupling
+easy to test
+interation with different modules
+ like JPA JTA JMS JDBC MVC WEB REST e.t.c
+declarative approch::
+ mean u can use xml file also to write the program 
+it is adeclaritive approach
+
+if u use java approach to wrtie the program it is called PROGRAMATIC approach(Annoattions)
+
+
+SPRING FRAMEWORK RUNTIME::
+DATA ACCESS INTEGRATION--
+ JDBC
+ORM
+OXM      [https://docs.spring.io/spring-framework/docs/3.0.x/spring-framework-reference/html/overview.html]
+
+
+
+MODULES OF SPRING::
+
+TYPES CONTAIN IN SPRING::
+
+since spring uses dependency injection
+ so first business logic is executed then the spring container creates the object
+that is ehay spring is also called IOC container
+Inversion of control container
+
+they are 2 types::
+1-- bean factory::
+     used to intilize configure instantiate and assemble the bean
+ it is present in org.spring.bean.factory.*package
+SYNTAX::
+Resource r=new ClassPathResource(String xml)
+BeanFactory b=new XmlBeanFactory(r)
+
+METHODS::
+object getbean(string s)
+object getbean(class c)
+instantiates thbe Bean
+
+FEATURES::
+does not supports annotations
+doess not supports integration with another module
+like ORM JTA JMS
+
+
+
+2-- ApplicationContex::
+     used to intilize configure instantiate and assemble the bean
+ it is present in org.spring.bean.content.*package
+SYNTAX::
+ApplicationContext ac=new ClassApplicationContext(String xml)
+
+METHODS::
+object getbean(string s)
+object getbean(class c)
+instantiates thbe Bean
+
+FEATURES::
+ supports annotations
+ supports integration with another module
+like ORM JTA JMS
+
+TYPES OF DEPENDENCY 
+ there are 2 types of dependency injections::
+1--setter injection
+     in this business logic for spring is executd by setter method
+2--constructor injection
+ in this business logic for spring is executd by constructor method
+
+
+STEPS TO WRITE A 1 SPRING PROGRAM:::
+-----------------------------------------------------------------------------------------------------
+1--CREATE A POJO CLASS USING SETTER/CONSTRUCTOR INJECTION
+2--CREATE XML FILE TO ACHIVE DEPENDENCY INJECTION
+FOR SETTER METHOD WE USE<proprty> tag
+for constructor we use <constructor-arg> tag
+3-- write a main program where spring IOC Container instantiates the bean
+
+FOR FOLLOWING WE CAN ACHIVE DEPENDENCY INJECTION
+1 PRIMITIVE TYPES
+2 COLLECTIONS
+3 MAPS
+4 DEPENDENT OBJECTS
+
+
+WRITE A PROGRAM TO CRAETE A CLASS CALLED BOOK WITH ID NAME CATEGORY PRICE 
+USING DEPENDENCY INJECTION 
+
+WRITE A FIRST PROGRAM IN SPRING???
+
+
+
+
+injecting the dependent object
+
+class address
+{
+ int streetno;
+ String city;
+ String state;
+class Emp
+{
+int id;
+String name;
+String state;
+}
+
+
+u can achive it using ref attribute of <poperty> or <constructor-arg> tag
+
+WRITE A PROGRAM TO INJECT FOLLOWING CALSS??
+ class person
+{
+int id;
+String name;
+List<Language> lan;
+}
+
+
+how to inject collection??
+<property name=" ">
+<list>
+<value>....</value>
+</list>
+
+
+
+how tpo inject map??
+ <property name="">
+ <map entery key=""  value=""/>
+ <map entery key=""  value=""/>
+ <map entery key=""  value=""/>
+
+create a class called 
+class student
+{
+int id;
+Strinh name;
+map<String, Integer> admission;
+
+(where key is course name value is fee )
+}
+use setter injection
+
+
+INNER BEAN
+---------------------------------
+when <bean> tag is written in the<proprtie > tag and <constructor-arg> tag is called inner bean.
+
+writting the bean inside the constructor is called inner bean.
+
+
+
+
+
+
+
+
+

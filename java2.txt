@@ -1,0 +1,64 @@
+write a programm to add the two numbers with oop??????
+class praveen;
+class sum{
+int number One;
+int number Two;
+int number Three;
+public void setData(int one,int two,int three)
+{
+numberOne=One;
+numberTwo=Two;
+numberThree=Three;
+}
+public int result()
+{ 
+   return numberOne+return numberTwo+return numberThree;
+}
+}
+public class Adding
+{
+int sum;
+public static void main(String[] args)
+{
+Logic logic = new Logic();
+logic.setData(10,100,1000);
+int sum=logic.result();
+system.out.println("sum "+logic.result());
+}}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+write a program to create a class called employee with name, working, desigenation, company, city and read the data from keyboard???????
+package praveen;
+import java.util.*;
+class Emp
+{
+    String name,company,city,des;
+    public void setDate(String name1, String Org, String loc,String des1)
+    {
+        name=name1;
+        company=Org;
+        city=loc;
+        des=des1;
+        
+    }
+    public void display()
+    {
+    System.ou.println("i am"+name+"working as a"+des+"in"+company+"company at"+city+"city");
+    }
+}
+public class EmpInfo
+{
+    public static void main(String[] args)
+    {
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter name,Desigination,Company name, City");
+        String n=s.next();
+        String d=s.next();
+        String c=s.next();
+        String ct=s.next();
+        Emp emp=new Emp();
+        emp.setData(n,c,d,ct);
+        emp.display();
+        
+    }
+}
+ 

@@ -1,0 +1,8 @@
+find the 4th least salary???
+--------select min(salary) AS "lowest salary" from emp;
+--------select name from emp where salary=(select salary from emp order by salary asc) as 4, salary;
+
+display the names of employees of each job who takes the minumim salary which must not exceed the 30000????????
+display the names of the employees who are also managers?????
+display the names of the manager who are taking salary avg salary of all it department????
+find the avg salary of each job truncate it to 2 digits?????????
